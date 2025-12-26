@@ -6,3 +6,4 @@ yes the Gui of shaders for roblox localplayer for You gamers in the roblox is op
 
 # THIS SCRIPTS AND OTHERS ALL IS OPEN SOURCE CREATED BY ME
 I am Brazilian and my channel of YouTube is @davidgames3d
+https://youtube.com/@davidgames3d?si=sA74DB02ve5d-9yv
