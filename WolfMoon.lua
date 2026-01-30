@@ -172,18 +172,18 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
 	Name = "BROOKHAVEN",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://101737622279179",
 	PremiumOnly = false
 })
 
 local Tab = Window:MakeTab({
 	Name = "DANDY WORLD",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://127011045071255",
 	PremiumOnly = false
 })
 
 local Tab = Window:MakeTab({
 	Name = "CONFIGURAÇÕES",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://18801194936",
 	PremiumOnly = false
 })
