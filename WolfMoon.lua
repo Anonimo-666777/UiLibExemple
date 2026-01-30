@@ -170,6 +170,29 @@ Tab:AddButton({
           end    
 })
 
+local noclip = false
+
+Tab:AddToggle({
+	Name = "Noclip",
+	Default = false,
+	Callback = function(Value)
+		noclip = Value
+	end
+})
+
+game:GetService("RunService").Stepped:Connect(function()
+	if noclip then
+		local char = game.Players.LocalPlayer.Character
+		if char then
+			for _,v in pairs(char:GetDescendants()) do
+				if v:IsA("BasePart") then
+					v.CanCollide = false
+				end
+			end
+		end
+	end
+end)
+
 local Tab = Window:MakeTab({
 	Name = "BROOKHAVEN",
 	Icon = "rbxassetid://101737622279179",
