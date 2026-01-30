@@ -12,6 +12,16 @@ Tab:AddButton({
 
 DashboardTab:AddSection("⚙️ Sistema")
 
+Tab:AddDropdown({
+    Name = "Dropdown",
+    Desc = "What is this dropdown do?",
+    Default = "1",
+    Options = {"1", "2", "3"},
+    Callback = function(value)
+        print(value)
+    end    
+})
+
 Tab:AddButton({
 	Name = "Button!",
 	Callback = function()
