@@ -129,7 +129,7 @@ Tab:AddButton({
 
 local Tab = Window:MakeTab({
         Name = "UNIVERSAL",
-        Icon = "rbxassetid://103324521810510",
+        Icon = "rbxassetid://92875681906793",
         PremiumOnly = false
 })
 
