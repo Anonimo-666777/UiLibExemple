@@ -181,9 +181,3 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://127011045071255",
 	PremiumOnly = false
 })
-
-local Tab = Window:MakeTab({
-	Name = "CONFIGURAÇÕES",
-	Icon = "rbxassetid://18801194936",
-	PremiumOnly = false
-})
