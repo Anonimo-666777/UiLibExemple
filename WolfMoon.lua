@@ -121,8 +121,8 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "Scripts",
-	Icon = "rbxassetid://11348555048",
+	Name = "UNIVERSAL",
+	Icon = "rbxassetid://103324521810510",
 	PremiumOnly = false
 })
 
