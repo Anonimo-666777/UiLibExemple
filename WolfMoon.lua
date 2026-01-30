@@ -169,3 +169,21 @@ Tab:AddButton({
         Callback = function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/rtiarg476-blip/Kamhack1337/refs/heads/main/Kamhack301.lua"))()
           end    
 })
+
+local Tab = Window:MakeTab({
+	Name = "BROOKHAVEN",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+	Name = "DANDY WORLD",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+	Name = "CONFIGURAÇÕES",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
