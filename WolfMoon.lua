@@ -1,5 +1,12 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "script by davidgames3d,menkato e outros",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
 local Window = OrionLib:MakeWindow({Name = "Wolf Moon🐺🌜 HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
