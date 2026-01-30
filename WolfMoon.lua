@@ -181,3 +181,5 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://127011045071255",
 	PremiumOnly = false
 })
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/blob/main/WolfMoonpt2.lua"))()
