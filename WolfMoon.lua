@@ -2,6 +2,24 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jen
 
 local Window = OrionLib:MakeWindow({Name = "Wolf Moon🐺🌜 HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+Tab:AddButton({
+    Name = "Button",
+    Desc = "What is this button do?",
+    Callback = function()
+    print("button pressed")
+     end
+})
+
+DashboardTab:AddSection("⚙️ Sistema")
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
 local Tab = Window:MakeTab({
 	Name = "HOME",
 	Icon = "rbxassetid://7733960981",
