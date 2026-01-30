@@ -150,3 +150,9 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Private-gui-by-hanif-leak-40943"))()
   	end    
 })
+
+Tab:AddButton({
+	Name = "universal invisibility script works in every game",
+	Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/hackrad3-collab/Addis/refs/heads/main/Addis"))()
+  	end    
+})
