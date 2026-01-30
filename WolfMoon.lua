@@ -156,3 +156,9 @@ Tab:AddButton({
 	Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/hackrad3-collab/Addis/refs/heads/main/Addis"))()
   	end    
 })
+
+Tab:AddButton({
+	Name = "Epilog universal aimbot esp",
+	Callback = function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/rtiarg476-blip/Kamhack1337/refs/heads/main/Kamhack301.lua"))()
+  	end    
+})
