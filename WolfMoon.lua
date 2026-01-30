@@ -2,44 +2,16 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jen
 
 local Window = OrionLib:MakeWindow({Name = "Wolf Moon🐺🌜 HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
-Tab:AddButton({
-    Name = "Button",
-    Desc = "What is this button do?",
-    Callback = function()
-    print("button pressed")
-     end
-})
-
-DashboardTab:AddSection("⚙️ Sistema")
-
-Tab:AddDropdown({
-    Name = "Dropdown",
-    Desc = "What is this dropdown do?",
-    Default = "1",
-    Options = {"1", "2", "3"},
-    Callback = function(value)
-        print(value)
-    end    
-})
-
-Tab:AddButton({
-	Name = "Button!",
-	Callback = function()
-      		print("button pressed")
-  	end    
-})
-
-
 local Tab = Window:MakeTab({
-	Name = "HOME",
-	Icon = "rbxassetid://7733960981",
-	PremiumOnly = false
+        Name = "HOME",
+        Icon = "rbxassetid://7733960981",
+        PremiumOnly = false
 })
 
 Tab:AddButton({
-	Name = "CRÉDITOS",
-	Callback = function()    		
-  	-- SERVIÇOS
+        Name = "CRÉDITOS",
+        Callback = function()                    
+          -- SERVIÇOS
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 
@@ -69,8 +41,8 @@ gradientFrame.Parent = background
 
 local uiGradient = Instance.new("UIGradient")
 uiGradient.Color = ColorSequence.new({
-	ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 0, 0)),
-	ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(150, 0, 0)),
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
 })
 uiGradient.Rotation = 90
 uiGradient.Parent = gradientFrame
@@ -89,39 +61,39 @@ text.Parent = background
 
 -- TWEENS
 local fadeIn = TweenService:Create(
-	background,
-	TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-	{BackgroundTransparency = 0}
+        background,
+        TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+        {BackgroundTransparency = 0}
 )
 
 local gradientFadeIn = TweenService:Create(
-	gradientFrame,
-	TweenInfo.new(1),
-	{BackgroundTransparency = 0}
+        gradientFrame,
+        TweenInfo.new(1),
+        {BackgroundTransparency = 0}
 )
 
 local textFadeIn = TweenService:Create(
-	text,
-	TweenInfo.new(1),
-	{TextTransparency = 0}
+        text,
+        TweenInfo.new(1),
+        {TextTransparency = 0}
 )
 
 local fadeOut = TweenService:Create(
-	background,
-	TweenInfo.new(1),
-	{BackgroundTransparency = 1}
+        background,
+        TweenInfo.new(1),
+        {BackgroundTransparency = 1}
 )
 
 local gradientFadeOut = TweenService:Create(
-	gradientFrame,
-	TweenInfo.new(1),
-	{BackgroundTransparency = 1}
+        gradientFrame,
+        TweenInfo.new(1),
+        {BackgroundTransparency = 1}
 )
 
 local textFadeOut = TweenService:Create(
-	text,
-	TweenInfo.new(1),
-	{TextTransparency = 1}
+        text,
+        TweenInfo.new(1),
+        {TextTransparency = 1}
 )
 
 -- EXECUÇÃO
@@ -142,51 +114,51 @@ end
 })
 
 Tab:AddButton({
-	Name = "matar interface💀",
-	Callback = function()
-      		OrionLib:Destroy()
-  	end    
+        Name = "matar interface💀",
+        Callback = function()
+                      OrionLib:Destroy()
+          end    
 })
 
 local Tab = Window:MakeTab({
-	Name = "UNIVERSAL",
-	Icon = "rbxassetid://103324521810510",
-	PremiumOnly = false
+        Name = "UNIVERSAL",
+        Icon = "rbxassetid://103324521810510",
+        PremiumOnly = false
 })
 
 Tab:AddButton({
-	Name = "Dark hub 2.0",
-	Callback = function()      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/main/UiMain.lua"))()
-  	end    
+        Name = "Dark hub 2.0",
+        Callback = function()      loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/main/UiMain.lua"))()
+          end    
 })
 
 Tab:AddButton({
-	Name = "DESPlock Hub by plockScripts",
-	Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/Scripts/refs/heads/main/Plock.lua", true))()
-  	end    
+        Name = "DESPlock Hub by plockScripts",
+        Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/PlockScripts/Scripts/refs/heads/main/Plock.lua", true))()
+          end    
 })
 
 Tab:AddButton({
-	Name = "R15 to R6 all games",
-	Callback = function()     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-R15-to-r6-script-working-all-game-26416"))()
-  	end    
+        Name = "R15 to R6 all games",
+        Callback = function()     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-R15-to-r6-script-working-all-game-26416"))()
+          end    
 })
 
 Tab:AddButton({
-	Name = "Private Gui by hanif leak",
-	Callback = function()
+        Name = "Private Gui by hanif leak",
+        Callback = function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Private-gui-by-hanif-leak-40943"))()
-  	end    
+          end    
 })
 
 Tab:AddButton({
-	Name = "universal invisibility script works in every game",
-	Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/hackrad3-collab/Addis/refs/heads/main/Addis"))()
-  	end    
+        Name = "universal invisibility script works in every game",
+        Callback = function()     loadstring(game:HttpGet("https://raw.githubusercontent.com/hackrad3-collab/Addis/refs/heads/main/Addis"))()
+          end    
 })
 
 Tab:AddButton({
-	Name = "Epilog universal aimbot esp",
-	Callback = function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/rtiarg476-blip/Kamhack1337/refs/heads/main/Kamhack301.lua"))()
-  	end    
+        Name = "Epilog universal aimbot esp",
+        Callback = function()    loadstring(game:HttpGet("https://raw.githubusercontent.com/rtiarg476-blip/Kamhack1337/refs/heads/main/Kamhack301.lua"))()
+          end    
 })
