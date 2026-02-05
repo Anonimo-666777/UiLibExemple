@@ -9,3 +9,11 @@ I am Brazilian and my channel of YouTube is @davidgames3d
 https://youtube.com/@davidgames3d?si=sA74DB02ve5d-9yv
 
 # NOT EVERYTHING IS OPEN SOURCE LIKE THE WOLF MOON HUB
+
+# Library of Mysterious
+
+Simple Roblox UI Library
+
+## Load
+```lua
+local Library = loadstring(game:HttpGet("URL"))()
