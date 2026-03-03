@@ -1,3 +1,10 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "hackL0rdGui"; -- Título da notificação
+    Text = "By davidgames3d Team"; -- Texto da notificação
+    Icon = "rbxassetid://134827225876114"; -- Ícone opcional
+    Duration = 9; -- Duração em segundos
+})
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/main/david.lua"))()
 
 -- Certifique-se de ter o ScreenGui criado primeiro
@@ -141,7 +148,7 @@ end
 end) 
 
 criarBotao("Dandy World", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/main/DWGui.lua"))() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/box-01/refs/heads/main/box%23%5Bboxten%20sex%20gui%5D/box%23%5Bmain%5D.lua"))()
 end) 
 
 criarBotao("aimbot ", function() 
