@@ -1,3 +1,5 @@
+local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/Lazarios-ui-library/main/CoreLib.lua"))()
+
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
     SubTitle = "v1.0 by davidgames3d", 
