@@ -3,18 +3,18 @@ local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Anoni
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
     SubTitle = "v1.0 by davidgames3d", 
-    Theme = "Neon",
+    Theme = "Dark",
     RGBBorder = true,
     LogoId    = "rbxassetid://132152602986684", 
 }) 
 
-Win:SetSize(600) 
-Win:SetOpacity(0.4)
+Win:SetSize(520) 
+Win:SetOpacity(0.2)
 
 -- tabs
 local Home = Win:MakeTab({
     Name = "Home",
-    Icon = "rbxassetid://123456",
+    Icon = "rbxassetid://132152602986684",
 })
 
 local Local = Win:MakeTab({
@@ -43,7 +43,7 @@ Home:MakeImage({
 -- Sections home
 Home:MakeSection("Version")
 
-Home:MakeLabel("David Hub V1.0
+Home:MakeLabel("David Hub V1.0") 
 
 Home:MakeLabel("Lazarus/Lazarios UI Lib V1.0.0 Beta") 
 
