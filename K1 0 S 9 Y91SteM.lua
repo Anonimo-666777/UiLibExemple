@@ -1,1 +1,714 @@
---[[ v1.0.0 https://wearedevs.net/obfuscator ]] return(function(...)local v={"\100\050\079\098\089\075\061\061","\100\073\084\054\112\073\080\061","\055\053\084\084\065\075\061\061","\099\107\121\051\106\112\116\061","\070\105\104\111\089\071\078\068\069\069\071\061","\112\113\118\088\051\043\067\116\071\083\065\085";"\073\085\100\071\048\068\098\114\119\122\100\105\108\110\082\067","\113\118\105\114\106\101\071\061","\068\069\053\122\112\121\106\085";"\100\101\110\089\065\101\072\050","\068\121\051\109\083\101\110\117";"\099\088\107\074\118\115\082\097\113\089\061\061";"\080\101\088\081\080\085\072\102\100\056\080\061";"\077\054\075\085\106\119\107\067\077\075\061\061","\106\113\079\109\112\121\108\061";"\053\069\111\061","\100\048\067\053\082\078\072\113\100\048\110\069\053\078\088\069\101\084\049\061";"\101\101\057\106\055\053\049\102\080\048\105\051\100\113\107\087","\097\076\110\080\117\115\061\061","\082\078\079\070\065\087\057\057\065\082\085\056\083\087\110\079\068\056\116\061";"\102\072\079\103\087\113\111\100\068\081\074\075","\082\052\057\109\051\113\053\110\100\078\067\076\049\102\053\099";"\065\117\085\087\106\115\061\061","\068\073\072\057\112\073\089\061";"\122\112\106\105\067\119\084\099";"\115\079\048\101\087\115\061\061";"\114\077\103\110\069\066\107\061";"\068\102\053\087\112\101\053\087\065\113\051\057\065\069\088\085";"\112\118\053\090\068\089\061\061";"\102\086\077\082\073\086\086\115\111\102\068\121\086\074\111\061";"\077\075\061\061","\049\073\110\051\083\102\115\071\080\101\051\097\053\069\053\122\080\115\061\061","\084\104\057\111\115\072\121\110\067\054\098\049\112\085\088\113\101\121\090\113\113\066\083\099\067\088\076\066\106\119\080\069\088\117\079\110\072\069\052\057\090\105\069\116\081\120\075\056\082\121\112\053\109\088\087\107\057\048\050\069\119\112\052\097\106\104\072\103\077\104\069\119\075\085\113\101\089\083\087\103\052\079\047\107\082\056\102\048\121\079\050\073\055\068\100\082\053\051\047\069\098\079\083\070\067\075\101\079\066\074\072\102\111\115\061\061";"\053\069\088\070\055\101\084\114\081\069\057\103\115\101\118\081\065\115\061\061";"\103\074\054\068\103\070\050\069\065\106\105\114\100\056\099\073\081\078\109\052\114\120\079\075\109\056\112\088";"\112\073\105\057\106\120\072\087\068\069\085\047\106\089\061\061";"\090\122\086\079\097\119\065\061","\049\108\106\077\120\043\070\054\069\117\078\061";"\047\083\077\049\074\097\112\056\110\111\047\107\049\116\055\076\073\098\049\101\086\084\100\075\113\053\085\073\085\074\043\056\073\103\066\106\068\043\117\072\065\071\087\081\104\078\078\099\122\097\070\070\069\106\098\098\117\078\084\065\048\107\068\052\122\076\100\081\122\116\061\061","\103\088\121\082\089\089\061\061","\113\118\105\122\106\113\051\057\100\073\084\054\112\073\080\061","\083\082\084\056\049\117\072\090\106\056\084\088\112\073\105\069\051\116\061\061";"\100\085\072\076\122\103\100\049\110\116\061\061";"\113\118\105\067\112\069\051\085\055\116\061\061";"\065\102\105\047\065\102\084\087","";"\112\071\050\120\047\102\055\074\108\080\098\043\122\075\061\061","\085\078\118\050\047\082\119\105\081\052\053\066\067\057\076\076\089\083\087\053\115\068\111\050\113\048\106\099\119\115\061\061";"\054\080\052\101\086\101\084\102\073\104\084\109\047\106\068\061","\051\121\110\081\081\077\078\061";"\081\120\051\087\068\078\100\085\100\116\061\061";"\056\043\090\057\111\119\089\061","\081\102\079\087\115\080\118\052\049\053\072\050\100\120\051\121\080\056\115\061","\085\108\049\079\080\116\061\061";"\067\084\089\055\105\107\099\049\109\075\061\061","\082\101\084\050\106\080\122\085\055\053\072\110\068\121\051\085\112\115\061\061","\057\072\085\089\120\080\115\061","\078\121\098\118";"\049\078\057\109\055\113\053\053\051\080\079\049\115\113\057\122\053\048\115\061";"\102\068\081\078\056\071\049\061","\115\069\072\117\080\120\106\051\065\052\100\106\051\084\057\084","\106\069\088\103\112\121\108\061","\088\101\072\083\068\050\057\086\079\081\112\080\052\103\116\061";"\043\056\118\109\055\105\055\105\066\053\048\061","\106\121\072\118\065\075\061\061";"\113\118\105\117\065\089\061\061";"\120\069\066\072\118\071\089\070\121\043\083\102\079\051\122\068\102\121\107\097\065\080\114\101\114\077\086\115\099\055\072\047";"\118\075\114\076\104\081\115\051\113\086\101\049\069\099\109\098\049\103\116\120";"\072\107\082\050\051\052\078\061";"\109\121\079\086\109\107\071\061","\112\101\084\087\083\116\061\061","\122\083\097\100\056\114\073\073\098\070\116\106\055\052\069\087\069\114\068\116\112\102\068\114\065\056\071\109\050\089\083\120\070\066\110\117\090\118\121\066\119\083\099\057\069\115\061\061";"\100\073\105\047\100\101\118\054\106\113\108\061","\056\052\117\073\048\065\049\061","\065\102\057\057\068\075\061\061";"\110\115\090\090\085\075\061\061","\051\080\105\072\082\078\068\089\100\102\072\107\065\082\106\120\051\089\061\061";"\051\084\099\117\115\117\106\050\106\078\079\076\100\084\051\090","\084\090\097\079\079\116\061\061","\084\068\072\100\104\116\061\061","\066\110\119\084\102\075\061\061";"\103\089\117\097\114\103\099\106\110\070\049\114";"\055\078\057\076\100\101\088\048\055\069\106\066\049\084\057\070\115\121\049\061","\097\073\053\081\067\056\103\075\121\098\078\050\075\103\080\098\057\107\055\065\084\120\075\109\055\056\085\097\105\097\117\103\102\114\082\120\115\110\101\072\056\097\115\113\106\082\065\088\066\119\053\074\099\099\078\107\057\083\110\047\106\111\118\114\043\116\121\089\079\105\050\121\084\071\107\068\101\043\068\070\049\080\048\087\069\099\087\086\107\111\085\054\082\076\074\122\105\067\100\117\098\051\103\085\089\112\067\088\076\055\104\111\087\099\057\097\110\055\103\103\052\089\061\061","\106\102\084\122\106\115\061\061";"\043\069\049\122\053\113\110\120\065\103\081\085\109\056\084\086\103\089\061\061";"\106\102\118\057\100\073\072\107","\053\073\084\122\068\073\053\109\108\078\051\085\100\073\053\052\100\073\053\048\108\115\061\061","\112\056\078\061","\068\120\079\067\112\117\115\061","\112\056\108\061";"\051\098\112\080\065\050\086\072";"\100\073\105\097\100\120\079\067\112\069\068\061","\112\073\053\047","\068\069\084\047\106\073\105\122"}for A,x in ipairs({{68342-68341;966994+-966899};{210528-210527,428879+-428852},{-759506+759534,728850-728755}})do while x[-118777+118778]<x[-917716+917718]do v[x[-291480+291481]],v[x[392347-392345]],x[-70213-(-70214)],x[-358874-(-358876)]=v[x[154004-154002]],v[x[507714-507713]],x[-681991+681992]+(637025-637024),x[-354053-(-354055)]-(-219755-(-219756))end end local function A(A)return v[A+(761920-760809)]end do local A=table.concat local x=type local m=math.floor local s={G=-1037384+1037440,q=1039990-1039967,K=249610+-249578,g=452657-452610,["\052"]=-1019464-(-1019499);M=-389662+389676;Q=-753808-(-753826),O=-897734+897743,n=393195-393138,R=-318927+318946;D=-514758+514786;w=734490+-734488,r=-495415-(-495459),T=657045-657040,E=-770006+770044,U=-161471+161508;l=980550-980542,["\051"]=606655+-606638;["\050"]=440578-440535;y=1014779-1014724;["\048"]=689242+-689206,t=840886+-840886;F=742770-742728;m=95001-94951,V=132859+-132797;d=757844+-757815;u=-342012-(-342051);z=944942-944897;v=-103029-(-103082);Y=-891808-(-891856),X=-984565+984614;["\049"]=488397-488385;a=643146+-643095,j=-839534-(-839559),["\054"]=289474-289440;N=721736+-721732;A=-221300+221324;p=983510+-983483,c=-261026-(-261027),B=-145052-(-145067),["\043"]=-832394+832425;s=-246093-(-246109),["\056"]=723069+-723066,W=503733+-503681,k=697820-697780,I=746305+-746299;b=82272-82213,J=-745480-(-745543);Z=-248894-(-248904),x=-765716-(-765723),i=-635050-(-635111);["\053"]=605313-605292;e=-306979-(-307001),f=725804-725750,o=929336+-929276;P=762088-762068;["\047"]=-387946-(-387992);H=-801004+801017;L=-882796+882854;h=-199281+199292,C=384458+-384417;["\055"]=-531709+531739,S=58597+-58571,["\057"]=613810+-613777}local V=string.len local k=table.insert local T=string.char local a=v local p=string.sub for v=763808-763807,#a,50896+-50895 do local S=a[v]if x(S)=="\115\116\114\105\110\103"then local x=V(S)local C={}local i=-498262-(-498263)local h=1047055-1047055 local M=-573003+573003 while i<=x do local v=p(S,i,i)local A=s[v]if A then h=h+A*(-114912+114976)^((335684-335681)-M)M=M+(395399-395398)if M==-684120+684124 then M=89790+-89790 local v=m(h/(992152+-926616))local A=m((h%(364570-299034))/(-8194-(-8450)))local x=h%(-923785-(-924041))k(C,T(v,A,x))h=437800+-437800 end elseif v=="\061"then k(C,T(m(h/(276898+-211362))))if i>=x or p(S,i+(-923667-(-923668)),i+(532353-532352))~="\061"then k(C,T(m((h%(91043-25507))/(894327+-894071))))end break end i=i+(47117-47116)end a[v]=A(C)end end end return(function(v,m,s,V,k,T,a,i,C,p,P,K,F,M,w,c,N,g,h,S,x,I,d)p,d,P,g,C,S,i,I,w,h,x,N,c,M,F,K={},function(v,A)local m=h(A)local s=function(s,V,k,T,a,p)return x(v,{s;V;k;T,a,p},A,m)end return s end,function(v,A)local m=h(A)local s=function(s,V)return x(v,{s,V},A,m)end return s end,function(v,A)local m=h(A)local s=function()return x(v,{},A,m)end return s end,function()i=(254074-254073)+i S[i]=-948538+948539 return i end,{},761489+-761489,function(v,A)local m=h(A)local s=function(s,V,k)return x(v,{s;V;k},A,m)end return s end,function(v,A)local m=h(A)local s=function(s)return x(v,{s},A,m)end return s end,function(v)for A=-524375-(-524376),#v,-260399+260400 do S[v[A]]=(-784731-(-784732))+S[v[A]]end if s then local x=s(true)local m=k(x)m[A(-820358-(-819318))],m[A(-220620+219602)],m[A(-929459-(-928383))]=v,M,function()return 859290+2497243 end return x else return V({},{[A(-765734-(-764716))]=M,[A(-76306+75266)]=v;[A(342108-343184)]=function()return 4131304-774771 end})end end,function(x,s,V,k)local as,Y,R,X,E,Ms,O,j,h,D,o,f,xs,Ts,e,y,l,t,ms,ps,us,hs,Ns,L,J,cs,Z,ks,M,U,vs,Os,r,c,ss,Ss,ds,Q,i,q,a,is,Fs,ws,W,Cs,u,As,js,b,Ps,Ks,S,z,B,n,H,Vs,gs,G,Is while x do if x<-51402+7539967 then if x<4213005-(-213112)then if x<-910460+4068785 then if x<2125740-192721 then if x<2195831-792716 then if x<-55905+1121830 then if x<1384409-749117 then h=A(-725969-(-724887))i=v[h]h=A(829356+-830431)S=i[h]x=v[A(177758-178820)]h=p[V[21969-21968]]i={S(h)}a={m(i)}else h=640047-640047 S=A(-247449+246380)x=v[S]i=p[V[-1030786-(-1030794)]]S=x(i,h)x=2088657-199849 end else x=-189823+2712039 q=H e=q L[q]=e q=nil end else if x<980976+467864 then h=68717-68716 i=p[V[-259473+259476]]S=i~=h x=S and 8957658-(-748904)or 13420556-(-74460)else x={}h=p[V[-478486+478495]]i=-688870+688871 M=h S=x h=-684477+684478 c=h x=65973+6265739 h=634811-634811 j=c<h h=i-c end end else if x<-1033637+3542112 then if x<2078806-(-298288)then if x<285669+1751980 then H=#L b=773422+-773422 q=H==b x=q and 16234435-521443 or 9072110-757402 else X=p[i]x=X and 15163944-291384 or 6969665-(-732988)Q=X end else o=A(728458-729544)U=A(-707052-(-705962))x=v[o]b=v[U]o=x(b)x=A(361710-362798)v[x]=o x=14231334-432753 end else if x<1679678-(-892458)then H=H+U q=H<=b e=not z q=e and q e=H>=b e=z and e q=e or q e=2262194-859554 x=q and e q=8288267-(-471523)x=x or q else x={}u=38901-38646 c=-422757+35184372511589 O=A(-592987+591914)Z=-634031+634032 p[V[252052-252050]]=x a=p[V[527148+-527145]]B=Z x=10761931-952404 M=a Z=-323774-(-323774)a=i%c p[V[-870834+870838]]=a j=i%u f=B<Z u=-795095-(-795097)c=j+u p[V[-485420-(-485425)]]=c u=v[O]O=A(825790-826875)j=u[O]u=j(S)j=A(563361-564399)O=610494-610493 h[i]=j Y=u j=395353+-395291 Z=O-B end end end else if x<3513845-(-238865)then if x<3009534-(-607434)then if x<3969105-527560 then if x<-793156+4048642 then Z=A(-374804+373730)Y=v[Z]x=-893598+13388544 a=Y else h=-288884+289121 i=p[V[-1033561-(-1033563)]]S=i*h i=-5153+6066001714986 a=S+i S=35184372578124-489292 i=574544-574543 x=a%S p[V[492909-492907]]=x S=p[V[-23782-(-23785)]]x=-737347+14232363 a=S~=i end else x=true p[V[16604-16603]]=x a={}x=v[A(119343-120410)]end else if x<4224356-552638 then a=A(-883336-(-882288))u=A(-1020373-(-1019278))i=A(-109854+108760)x=v[a]S=v[i]M=p[V[-674092-(-674093)]]O=7020050572402-1038254 c=p[V[226298+-226296]]j=c(u,O)h=M[j]M=A(-668832+667799)M=S[M]i={M(S,h)}a=x(m(i))x=a()x=v[A(152260+-153310)]a={}else p[i]=y W=143718+-143717 E=p[l]t=E+W D=r[t]G=B+D D=-500196+500452 x=G%D t=p[e]D=f+t t=-535439-(-535695)B=x G=D%t f=G x=-1011721+6881349 end end else if x<4612320-724720 then if x<-274564+4063123 then x=-253949+14923156 else a={}x=v[A(-720360-(-719259))]end else if x<746852+3196308 then y=p[i]a=y x=y and 11542016-594609 or 17030867-504679 else S=A(887677+-888768)a=A(-553325-(-552256))x=v[a]a=x(S)a={}x=v[A(-135560-(-134535))]end end end end else if x<5866498-257529 then if x<6081167-1002301 then if x<4949000-164241 then if x<7045+4512920 then if x<3419751-(-1016635)then x=true x=-550194+16321701 else c=K(c)f=nil B=nil i=K(i)O=nil O=A(1006111+-1007193)h=K(h)M=K(M)L=nil i=nil u=K(u)H=K(H)M=C()q=nil h=nil p[M]=i Y=K(Y)i=C()x=1541848-(-980368)j=nil j=A(-980856-(-979748))B={}p[i]=h Z=K(Z)Y=A(318690+-319763)c=v[j]u=A(113110-114218)j=A(-669926+668904)h=c[j]c=C()Z=C()p[c]=h H=-868371+868627 j=v[u]u=A(737727+-738811)h=j[u]u=v[O]b=H O=A(160171-161246)j=u[O]O=v[Y]Y=A(-374953+373849)L={}u=O[Y]O=-827800-(-827800)Y=C()p[Y]=O f=C()O=-39036+39038 p[Z]=O O={}p[f]=B B=90703+-90703 H=-731146+731147 q=-857264+857265 U=H H=653892-653892 z=U<H H=q-U end else a=y x=G x=345389+16180799 end else if x<5665749-730844 then L=A(-213963+212881)f=v[L]L=A(-300142-(-299068))x=9245068-224717 B=f[L]Y=B else x=p[V[586942+-586941]]O=-329589-(-329589)Y=-148247-(-148502)i=h u=x(O,Y)S[i]=u x=935593+5396119 i=nil end end else if x<889945+4214863 then if x<-726017+5818698 then i=A(559986-561057)a=4994161-47153 h=10665965-(-226730)S=i^h x=a-S a=A(967495-968563)S=x x=a/S a={x}x=v[A(288475-289517)]else O=Z x=926949+8882578 o=A(318172-319245)X=v[o]o=A(960343-961404)Q=X[o]X=Q(S,O)Q=p[V[-947214-(-947220)]]o=Q()H=X+o o=191152-191151 q=H+j O=nil H=491874-491618 L=q%H j=L H=h[i]X=j+o Q=M[X]q=H..Q h[i]=q end else if x<-354140+5517583 then c=-781532+781534 i=p[V[216662+-216661]]M=-398523+398524 h=i(M,c)i=-292928+292929 S=h==i a=S x=S and-634495+15316563 or 10687821-225090 else x=699761+14395745 end end end else if x<7813991-893498 then if x<6509242-421263 then if x<6742852-923545 then if x<6443366-691248 then i=A(65988-67069)a=6311169-(-649185)h=-455441+12060979 S=i^h x=a-S a=A(-924344-(-923289))S=x x=a/S a={x}x=v[A(628608+-629704)]else D=73255-73254 x=363329+3333257 G=r[D]y=G end else r=nil z=K(z)n=K(n)x=-758602+10533529 J=K(J)e=K(e)l=K(l)U=K(U)end else if x<5812326-(-774420)then h=h+c u=not j i=h<=M i=u and i u=h>=M u=j and u i=u or i u=583469+4479464 x=i and u i=-107641+11438488 x=x or i else x=true x=x and 7338407-(-853152)or 132227+13543361 end end else if x<7545709-472349 then if x<-914610+7882974 then U=C()z=A(266301+-267409)p[U]=Q W=473777+-473777 e=94143-94043 a=v[z]R=-452592-(-462592)z=A(816251+-817335)x=a[z]z=-673631+673632 a=x(z,e)l=-707452-(-707707)z=C()p[z]=a x=p[u]e=-189399-(-189399)a=x(e,l)e=C()J=875319-875318 l=-93349+93350 p[e]=a x=p[u]n=p[z]a=x(l,n)l=C()p[l]=a a=p[u]D=A(118465+-119551)r=575290-575288 n=a(J,r)a=-740224-(-740225)x=n==a r=A(-449399-(-448346))a=A(-719394+718324)n=C()p[n]=x G=v[D]x=A(521797-522816)t=p[u]E={t(W,R)}x=q[x]D=G(m(E))G=A(633778+-634831)y=D..G J=r..y x=x(q,a,J)r=A(-900862-(-899802))J=C()p[J]=x a=v[r]y=w(5542933-437275,{u,U;Z,h;i,H,n,J;z,l,e,Y})r={a(y)}x={m(r)}r=x x=p[n]x=x and 96971+3802233 or 14498550-323567 else x=-500339+15595845 j=nil u=nil M=nil end else if x<-457687+7745214 then x=-374357+11646442 j=p[c]a=j else x=p[u]o=-472310-(-472311)b=-734313-(-734319)X=x(o,b)x=A(511223+-512311)b=A(804214-805302)v[x]=X o=v[b]b=484096-484094 x=o>b x=x and 602192+1903856 or 443280+10552339 end end end end end else if x<16406+12799503 then if x<10425349-247843 then if x<-467860+8821100 then if x<8837342-656809 then if x<-343559+8100798 then if x<455771+7238463 then E=-450071+450073 t=r[E]x=3592710-(-939575)E=p[J]D=t==E y=D else p[i]=Q x=p[i]x=x and 823502+11942085 or 3906482-(-520573)end else x=true x=x and 4065118-308640 or 16125266-353759 end else if x<8586634-286384 then S=A(-924549+923459)a=A(-328195+327107)x=v[a]a=v[S]S=A(-985091+984001)v[S]=x S=A(-229251+228163)v[S]=a S=p[V[-305775-(-305776)]]x=7029778-128511 i=S()else e=434741-434740 b=#L H=-102436+102437 q=h(H,b)H=j(L,q)b=p[f]x=2188223-171510 z=H-e U=u(z)q=nil b[H]=U H=nil end end else if x<10683366-976095 then if x<-713319+10285813 then if x<-726838+9695216 then H=#L b=-903762-(-903762)x=7278149-(-1036559)q=H==b else a=Y x=Z x=Y and-437387+12932333 or 2558601-(-614420)end else B=325515-325502 h=211761+-211729 i=p[V[-376326+376329]]Y=161434-161432 S=i%h M=p[V[-44204+44208]]u=p[V[-899029-(-899031)]]q=p[V[-634314+634317]]L=q-S q=-984216-(-984248)f=L/q Z=B-f O=Y^Z j=u/O B=-210049+210305 c=M(j)M=4295176285-208989 h=c%M O=114868+-114867 c=1035336-1035334 M=c^S i=h/M S=nil M=p[V[370236+-370232]]u=i%O O=746713+4294220583 j=u*O c=M(j)M=p[V[257526+-257522]]j=M(i)Y=-17144+17400 h=c+j c=-873142+938678 M=h%c j=h-M u=-952219+1017755 c=j/u u=-1021225-(-1021481)j=M%u h=nil i=nil O=M-j M=nil u=O/Y x=2993-(-222396)Y=-747782-(-748038)O=c%Y Z=c-O Y=Z/B c=nil Z={j,u;O;Y}j=nil u=nil O=nil Y=nil p[V[1048003+-1048002]]=Z end else if x<10751234-959165 then U=not b Q=Q+o a=Q<=X a=U and a U=Q>=X U=b and U a=U or a U=7898586-960669 x=a and U a=-310672+2369495 x=x or a else Z=Z+B L=not f O=Z<=Y O=L and O L=Z>=Y L=f and L O=L or O L=481657+4619940 x=O and L O=6896627-(-91433)x=x or O end end end else if x<9791+11293144 then if x<862071+10090999 then if x<10044633-(-703093)then if x<10911172-478677 then S=nil p[V[-165062-(-165067)]]=a x=-10944+15315268 else i=p[V[-180977+180979]]h=p[V[-463667-(-463670)]]x=14228818-(-453250)S=i==h a=S end else G=x E=693654+-693653 t=r[E]E=false D=t==E x=D and 6569103-(-923926)or 218445+4313840 y=D end else if x<11475477-249683 then b=A(327872+-328960)x=v[b]b=A(593054+-594144)v[b]=x x=14492666-694085 else j=a u=A(-224441-(-223333))a=v[u]u=A(835893-836977)x=a[u]u=C()p[u]=x O=A(-578092-(-577010))a=v[O]O=A(994403-995442)x=a[O]Z=x O=x f=A(-57524+56442)B=v[f]Y=B x=B and 989607+3865133 or 8087820-(-932531)end end else if x<-380550+12805685 then if x<-831447+12813773 then x=p[V[305886+-305876]]i=p[V[381498+-381487]]S[x]=i x=p[V[731668+-731656]]i={x(S)}x=v[A(32285+-33349)]a={m(i)}else x=-548357+7449624 end else if x<11749133-(-886112)then Y=C()B=497222-497157 p[Y]=a x=p[u]Z=85115-85112 a=x(Z,B)L=A(701181+-702241)Z=C()p[Z]=a x=491325-491325 q=I(5652971-(-35691),{})B=x x=-2509-(-2509)a=v[L]L={a(q)}f=x x={m(L)}a=751364-751362 o=A(-254760+253674)L=x x=L[a]a=A(791786+-792892)q=x x=v[a]H=p[h]X=v[o]o=X(q)X=A(284965-286035)Q=H(o,X)H={Q()}a=x(m(H))H=C()p[H]=a Q=p[Z]X=Q a=-657081+657082 Q=-323505-(-323506)o=Q x=8847359-(-927568)Q=-1001700-(-1001700)b=o<Q Q=a-o else x=3649698-(-790961)end end end end else if x<15628980-950049 then if x<-52362+13908793 then if x<249161+13421766 then if x<220817+13225591 then if x<-63367+13156863 then h=p[V[-477111-(-477117)]]i=h==S x=9452553-(-887722)a=i else S=p[V[-374798+374799]]a=#S S=-441406+441406 x=a==S x=x and-452778+3715635 or-89824-(-315213)end else x=-818591+2225963 h=-847022+847149 i=p[V[1033156-1033153]]S=i*h i=-824485+824742 a=S%i p[V[784412+-784409]]=a end else if x<-621209+14351740 then a={}x=v[A(-175421-(-174369))]else x=669671+13999536 end end else if x<775742+13396454 then if x<1020873+12974660 then M=A(479085-480171)O=A(382613-383673)a=A(-34730-(-33624))x=v[a]S=p[V[-684158+684162]]h=v[M]Y=P(805631+4279582,{})u=v[O]O={u(Y)}j={m(O)}u=483380-483378 c=j[u]M=h(c)h=A(-203868-(-202798))i=S(M,h)S={i()}a=x(m(S))S=a i=p[V[-532694-(-532699)]]a=i x=i and 12805839-(-174935)or-995819+11336094 else x=p[V[451851-451850]]S=s[-817949+817950]i=s[1045830+-1045828]h=x x=h[i]x=x and 5832950-247531 or-1025519+3604899 end else if x<15499887-882824 then G=p[i]x=G and 6121074-307230 or 4491058-794472 y=G else x=true x=x and 7169474-(-125320)or-6401+3864106 end end end else if x<15374321-(-100817)then if x<15449843-467647 then if x<574226+14384706 then if x<265673+14540563 then x=a and 14175253-235299 or 14330131-(-974193)else X=B==f Q=X x=6909598-(-793055)end else a=A(143125-144214)x=v[a]i=p[V[459786-459785]]h=p[V[711346+-711344]]j=668543+34694188600220 c=A(593148+-594165)M=h(c,j)S=i[M]a=x(S)x=v[A(-907286-(-906220))]a={}end else if x<15753035-502755 then a={i}x=v[A(-670495-(-669472))]else x=p[V[345883+-345876]]x=x and-629455+1373527 or 715225+1173583 end end else if x<15797481-(-666489)then if x<14992597-(-755348)then q={}Cs=27864151738291-(-944892)n=A(-644818+643778)e={}U=C()r=A(-315351+314308)D=nil ks=26611228614577-(-69814)u=nil j=nil us=29587995009229-469756 z=A(848830-849886)H=C()p[H]=q q=C()b=g(14144409-1042919,{H,Y,Z,c})gs=992921+34499912423464 p[q]=b b={}L=nil p[U]=b b=v[z]J=p[U]cs=10389299787464-(-302109)O=nil l={[n]=J,[r]=D}r=-210885+11317334002779 z=b(e,l)L=-159840+7346407947708 c=K(c)b=d(13127368-(-938707),{U,H,f,Y;Z;q})B=nil p[M]=z U=K(U)E=28565688521979-(-122618)p[i]=b u=A(986839-987933)c=A(268895+-269943)h=nil q=K(q)Fs=354802+16960771781863 l=20055736269324-(-797295)Y=K(Y)U=-278379+14533635955162 h=v[c]f=K(f)Z=K(Z)Ts=803517+29412136514243 j=v[u]ss=-865027+9065285239680 H=K(H)Y=p[M]Z=p[i]f=A(-459451-(-458400))B=Z(f,L)O=Y[B]H=-341701+19504052083263 Vs=-1030406+26571545766235 Y=A(657733-658766)Y=j[Y]ds=918229+30887086929241 u={Y(j,O)}L=10024141769241-(-559138)c=h(m(u))Ms=524711+26187857509 b=442051145118-453841 h=c()f=28562016661062-686674 B=A(-593876+592796)Ks=1676978654999-494603 O=p[M]Y=p[i]Z=Y(B,f)ws=-286837+21181030188796 q=30965798052040-75893 u=O[Z]Y=p[M]J=334446+30272452877474 f=A(-490177+489128)Z=p[i]B=Z(f,L)O=Y[B]as=808555+16653348718559 L=A(571498+-572518)Z=p[M]e=-971222+13318884485648 B=p[i]Ss=430227+26992656490630 f=B(L,q)Y=Z[f]B=p[M]q=A(410182+-411227)f=p[i]L=f(q,H)Z=B[L]H=A(416920-417985)f=p[M]L=p[i]W=10044054739510-133105 q=L(H,b)B=f[q]L=p[M]b=A(-705909+704802)q=p[i]H=q(b,U)f=L[H]q=p[M]n=6619521677852-(-528878)H=p[i]U=A(-601389+600363)b=H(U,e)L=q[b]e=A(328157-329220)H=p[M]D=503559+22776463080039 b=p[i]c=A(-751113-(-750085))U=b(e,l)q=H[U]l=A(939628-940658)vs=2587303835707-(-412793)b=p[M]U=p[i]e=U(l,n)Ps=10341249366355-(-563580)H=b[e]U=p[M]t=5106195766865-1037576 n=A(-662992-(-661955))Is=-1003691+10831351784542 e=p[i]l=e(n,J)b=U[l]e=p[M]l=p[i]J=A(-363222+362139)xs=9693106234709-316340 n=l(J,r)U=e[n]l=p[M]r=A(-553537-(-552508))n=p[i]J=n(r,D)e=l[J]As=676373452753-333463 n=p[M]ps=2233333228348-646957 hs=365158261000-499806 D=A(19423+-20526)J=p[i]ms=10145136733838-(-222182)r=J(D,t)x=v[A(-521374+520272)]l=n[r]is=8299334198915-(-92309)J=p[M]t=A(-609180-(-608123))r=p[i]D=r(t,E)E=A(490676-491720)n=J[D]r=p[M]D=p[i]t=D(E,W)J=r[t]R=-18848+6745358292453 W=A(-403328-(-402282))D=p[M]t=p[i]E=t(W,R)r=D[E]R=A(149678-150736)t=p[M]E=p[i]W=E(R,vs)D=t[W]vs=A(-317383-(-316342))E=p[M]W=p[i]R=W(vs,As)Ns=116923+30991986241444 t=E[R]W=p[M]js=A(196229+-197288)R=p[i]As=A(322654-323753)vs=R(As,xs)xs=A(917078-918155)E=W[vs]R=p[M]vs=p[i]As=vs(xs,ms)a={}ms=A(-490325-(-489227))W=R[As]vs=p[M]As=p[i]xs=As(ms,ss)R=vs[xs]ss=A(346968+-348040)As=p[M]xs=p[i]ms=xs(ss,Vs)vs=As[ms]xs=p[M]Vs=A(489831-490931)ms=p[i]ss=ms(Vs,ks)As=xs[ss]ms=p[M]ss=p[i]ks=A(634887+-635974)Vs=ss(ks,Ts)xs=ms[Vs]ss=p[M]Ts=A(-506655-(-505631))Vs=p[i]ks=Vs(Ts,as)ms=ss[ks]Vs=p[M]ks=p[i]as=A(-827239+826185)Ts=ks(as,ps)ps=A(878026+-879131)ss=Vs[Ts]ks=p[M]Ts=p[i]as=Ts(ps,Ss)Vs=ks[as]Ts=p[M]as=p[i]Ss=A(-967639+966618)ps=as(Ss,Cs)ks=Ts[ps]as=p[M]ps=p[i]Cs=A(-672814-(-671780))Ss=ps(Cs,is)Ts=as[Ss]ps=p[M]Ss=p[i]c=h[c]is=A(-610206+609127)Cs=Ss(is,hs)hs=A(415891+-417001)as=ps[Cs]Ss=p[M]Cs=p[i]is=Cs(hs,Ms)ps=Ss[is]Cs=p[M]Ms=A(612469+-613566)is=p[i]hs=is(Ms,Ks)Ss=Cs[hs]Ks=A(720178+-721287)is=p[M]hs=p[i]Ms=hs(Ks,cs)Cs=is[Ms]cs=A(619998-621091)hs=p[M]Ms=p[i]Ks=Ms(cs,Ns)is=hs[Ks]Ms=p[M]Ns=A(-269135+268088)Ks=p[i]cs=Ks(Ns,ws)hs=Ms[cs]Ks=p[M]cs=p[i]ws=A(31134-32169)Ns=cs(ws,Is)Is=A(-112142+111115)Ms=Ks[Ns]cs=p[M]Ns=p[i]ws=Ns(Is,Ps)Ks=cs[ws]Ns=p[M]Ps=A(-587029-(-586013))ws=p[i]Is=ws(Ps,gs)cs=Ns[Is]gs=A(898977+-900009)ws=p[M]Is=p[i]Ps=Is(gs,ds)Ns=ws[Ps]Is=p[M]Ps=p[i]ds=A(-522114-(-521078))Os=-867051+4552864482099 gs=Ps(ds,Fs)Fs=A(-1011167+1010089)ws=Is[gs]Ps=p[M]gs=p[i]ds=gs(Fs,us)Is=Ps[ds]Ps=F(4465111-816819,{M;i})ds=p[M]Fs=p[i]us=Fs(js,Os)gs=ds[us]ds=F(305821+14670678,{M;i})j={[u]=O;[Y]=Z,[B]=f,[L]=q;[H]=b;[U]=e,[l]=n;[J]=r,[D]=t;[E]=W,[R]=vs;[As]=xs,[ms]=ss,[Vs]=ks,[Ts]=as,[ps]=Ss;[Cs]=is,[hs]=Ms;[Ks]=cs,[Ns]=ws;[Is]=Ps,[gs]=ds}i=K(i)c=c(h,j)M=K(M)h=nil else x=g(39610+12344351,{M})X={x()}a={m(X)}x=v[A(589805+-590836)]end else if x<16787199-249783 then p[i]=a x=-648802+6518430 else h=A(-243721-(-242648))i=C()u=A(199874+-200934)S=s x=true p[i]=x a=v[h]M=C()h=A(373713-374805)x=a[h]h=C()p[h]=x c=C()O=w(49235+3425139,{c})x=N(3562060-(-811919),{})p[M]=x x=false p[c]=x j=v[u]u=j(O)x=u and 7708445-528084 or 22931+11249154 a=u end end end end end end end x=#k return m(a)end,function(v,A)local m=h(A)local s=function(s,V,k,T,a)return x(v,{s,V;k,T;a},A,m)end return s end,function(v,A)local m=h(A)local s=function(...)return x(v,{...},A,m)end return s end,function(v)local A,x=571107+-571106,v[-1031864-(-1031865)]while x do S[x],A=S[x]-(-1047353+1047354),(-816363+816364)+A if 840025-840025==S[x]then S[x],p[x]=nil,nil end x=v[A]end end,function(v,A)local m=h(A)local s=function(s,V,k,T)return x(v,{s,V,k;T},A,m)end return s end,function(v)S[v]=S[v]-(476023+-476022)if-21869+21869==S[v]then S[v],p[v]=nil,nil end end return(c(-579211+17117450,{}))(m(a))end)(getfenv and getfenv()or _ENV,unpack or table[A(681806-682880)],newproxy,setmetatable,getmetatable,select,{...})end)(...)
+local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/Lazarios-ui-library/main/CoreLib.lua"))()
+
+-- Serviços necessários
+local player = game.Players.LocalPlayer
+local RunService = game:GetService("RunService")
+local noclipConnection
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+-- criação da Window
+local Win = NexusUI:MakeWindow({
+    Title = "David Hub",
+    SubTitle = "v2.0 | by davidgames3d", 
+    Theme = "Dark",
+    RGBBorder = true,
+    LogoId    = "rbxassetid://132152602986684", 
+}) 
+
+Win:SetSize(520) 
+Win:SetOpacity(0.1)
+
+-- tabs
+local Home = Win:MakeTab({
+    Name = "Home",
+    Icon = "rbxassetid://123456",
+})
+
+local Local = Win:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://123456",
+})
+
+local Info = Win:MakeTab({
+    Name = "Info",
+    Icon = "rbxassetid://123456",
+})
+
+-- icon/image Label
+
+Home:MakeImage({
+    Image  = "rbxassetid://132152602986684",
+    Height = 150,
+    Desc   = "Logo do hub",
+})
+
+-- Sections home
+Home:MakeSection("Version")
+
+Home:MakeLabel("David Hub V1.0") 
+
+Home:MakeLabel("Lazarus/Lazarios UI Lib V1.0.0 Beta") 
+
+Home:MakeSection("Créditos") 
+
+Home:MakeLabel("Redes sociais") 
+
+Home:MakeImage({
+    Image  = "rbxassetid://5597737428",
+    Height = 90,
+    Desc   = "Youtube",
+})
+
+Home:MakeInput({
+	Name = "Youtube do criador",
+	Placeholder = "https://youtube.com/@davidgames3d?si=sIBVlOB3inq3sCHb",
+	Callback = function(text, enter)
+		
+	end,
+})
+
+Home:MakeImage({
+    Image  = "rbxassetid://10367063073",
+    Height = 90,
+    Desc   = "Discord",
+})
+
+Home:MakeInput({
+	Name = "Discord do criador",
+	Placeholder = "https://discord.gg/nMGZGk5Tj",
+	Callback = function(text, enter)
+		setclipboard("https://discord.gg/nMGZGk5Tj")
+	end,
+})
+
+Home:MakeImage({
+    Image  = "rbxassetid://106465383791027",
+    Height = 90,
+    Desc   = "Github do criador",
+})
+
+Home:MakeInput({
+	Name = "Github do criador",
+	Placeholder = "https://github.com/Anonimo-666777",
+	Callback = function(text, enter)
+		setclipboard("https://github.com/Anonimo-666777")
+	end,
+})
+
+-- Section Info
+Info:MakeSection("Version") 
+
+Info:MakeLabel("Lazarus UI Lib v1.0.0 beta")
+
+Info:MakeLabel("David Hub V2.0") 
+
+Info:MakeSection("curiosidades e fatos") 
+
+Info:MakeLabel("Esse script usa uma Lib chamada Lazarus UI Lib ou lazarios feita por mim") 
+
+Info:MakeLabel("Eu faço scripts só pelo celular sei programar pouco mas tô aprendendo") 
+
+Info:MakeLabel("Eu fiz o site da key com o mimo gratuitamente sem saber scriptar css, js nem html") 
+
+Info:MakeSection("INFO ADICIONAL") 
+
+Info:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas e tabs novas em cada jogo tipo dandy world e brookhaven")
+
+-- Section LocalPlayer
+Local:MakeSection("scripts") 
+
+Local:MakeButton({
+	Name = "Lazarus hub universal Script",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastefy.app/sJjppszH/raw"))()
+	end,
+})
+
+Local:MakeButton({
+	Name = "Lalol hub backdoor scanner universal",
+	Callback = function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-backdoor-83783"))()
+	end,
+})
+
+Local:MakeSection("LocalPlayer") 
+
+local imageID = ""
+
+Local:MakeInput({
+	Name = "Decal/Texture All",
+	Placeholder = "Digite o seu ID de Imagem",
+	Callback = function(text, enter)
+		imageID = text
+	end,
+})
+
+Local:MakeButton({
+	Name = "Executar Decal/Texture All",
+	Callback = function()
+		if imageID == "" then
+			return
+		end
+
+		local formattedID = imageID
+		if not string.match(formattedID, "^rbxassetid://") then
+			formattedID = "rbxassetid://" .. formattedID
+		end
+
+		local function applyToInstance(instance)
+			if instance:IsA("BasePart") or instance:IsA("MeshPart") or instance:IsA("SpecialMesh") or instance:IsA("UnionOperation") then
+				for _, child in ipairs(instance:GetChildren()) do
+					if child:IsA("Texture") then
+						child.Texture = formattedID
+					elseif child:IsA("Decal") then
+						child.Texture = formattedID
+					end
+				end
+
+				local hasTexture = false
+				for _, child in ipairs(instance:GetChildren()) do
+					if child:IsA("Texture") or child:IsA("Decal") then
+						hasTexture = true
+						break
+					end
+				end
+
+				if not hasTexture then
+					local decal = Instance.new("Decal")
+					decal.Texture = formattedID
+					decal.Face = Enum.NormalId.Front
+					decal.Parent = instance
+
+					local decalBack = Instance.new("Decal")
+					decalBack.Texture = formattedID
+					decalBack.Face = Enum.NormalId.Back
+					decalBack.Parent = instance
+
+					local decalTop = Instance.new("Decal")
+					decalTop.Texture = formattedID
+					decalTop.Face = Enum.NormalId.Top
+					decalTop.Parent = instance
+
+					local decalBottom = Instance.new("Decal")
+					decalBottom.Texture = formattedID
+					decalBottom.Face = Enum.NormalId.Bottom
+					decalBottom.Parent = instance
+
+					local decalLeft = Instance.new("Decal")
+					decalLeft.Texture = formattedID
+					decalLeft.Face = Enum.NormalId.Left
+					decalLeft.Parent = instance
+
+					local decalRight = Instance.new("Decal")
+					decalRight.Texture = formattedID
+					decalRight.Face = Enum.NormalId.Right
+					decalRight.Parent = instance
+				end
+			end
+
+			if instance:IsA("SpecialMesh") then
+				instance.TextureId = formattedID
+			end
+
+			if instance:IsA("Sky") then
+				instance.SkyboxBk = formattedID
+				instance.SkyboxDn = formattedID
+				instance.SkyboxFt = formattedID
+				instance.SkyboxLf = formattedID
+				instance.SkyboxRt = formattedID
+				instance.SkyboxUp = formattedID
+			end
+		end
+
+		local function recurse(parent)
+			for _, instance in ipairs(parent:GetDescendants()) do
+				applyToInstance(instance)
+			end
+		end
+
+		recurse(workspace)
+
+		for _, player in ipairs(game.Players:GetPlayers()) do
+			if player.Character then
+				recurse(player.Character)
+				for _, part in ipairs(player.Character:GetDescendants()) do
+					if part:IsA("SpecialMesh") then
+						part.TextureId = formattedID
+					end
+					if part:IsA("Shirt") then
+						part.ShirtTemplate = formattedID
+					end
+					if part:IsA("Pants") then
+						part.PantsTemplate = formattedID
+					end
+					if part:IsA("ShirtGraphic") then
+						part.Graphic = formattedID
+					end
+				end
+			end
+		end
+
+		print("Decal/Texture All aplicado com ID: " .. formattedID)
+	end,
+})
+
+Local:MakeButton({
+	Name = "Fly Gui",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastefy.app/h8KwvbDk/raw"))()
+	end,
+})
+
+Local:MakeButton({
+	Name = "ShiftLocker",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/disaster-CREW/Shift-lock-for-mobile/refs/heads/main/shiftlock.lua"))()
+	end,
+})
+
+Local:MakeButton({
+	Name = "WalkFling Universal",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+	end,
+})
+
+Local:MakeSlider({
+	Name = "Velocidade",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Suffix = " sp",
+	Callback = function(value)
+		if player.Character and player.Character:FindFirstChild("Humanoid") then
+			player.Character.Humanoid.WalkSpeed = value
+		end
+	end,
+})
+
+Local:MakeSlider({
+	Name = "Altura do Pulo",
+	Min = 0,
+	Max = 500,
+	Default = 50,
+	Suffix = " jp",
+	Callback = function(value)
+		if player.Character and player.Character:FindFirstChild("Humanoid") then
+			player.Character.Humanoid.UseJumpPower = true
+			player.Character.Humanoid.JumpPower = value
+		end
+	end,
+})
+
+Local:MakeButton({
+	Name = "Resetar Atributos",
+	Callback = function()
+		if player.Character and player.Character:FindFirstChild("Humanoid") then
+			player.Character.Humanoid.WalkSpeed = 16
+			player.Character.Humanoid.JumpPower = 50
+			print("Atributos resetados!")
+		end
+	end
+})
+
+Local:MakeToggle({
+	Name = "Noclip",
+	Default = false,
+	Callback = function(state)
+		if state then
+			-- Ativa o Noclip
+			noclipConnection = RunService.Stepped:Connect(function()
+				if player.Character then
+					for _, part in pairs(player.Character:GetDescendants()) do
+						if part:IsA("BasePart") then
+							part.CanCollide = false
+						end
+					end
+				end
+			end)
+		else
+			-- Desativa o Noclip
+			if noclipConnection then
+				noclipConnection:Disconnect()
+				noclipConnection = nil
+			end
+			-- Opcional: Forçar a colisão de volta imediatamente (ou esperar o reset do motor físico)
+		end
+	end,
+})
+
+Local:MakeSection("outros players") 
+
+local selectedPlayer = nil
+
+-- Função para pegar nicks (exceto o seu)
+local function getPlayerNames()
+    local names = {}
+    for _, v in pairs(Players:GetPlayers()) do
+        if v ~= LocalPlayer then
+            table.insert(names, v.Name)
+        end
+    end
+    return names
+end
+
+-- Dropdown de Jogadores
+local PlayerDropdown = Local:MakeDropdown({
+    Name = "Selecionar Alvo",
+    Options = getPlayerNames(),
+    Default = "Nenhum",
+    Callback = function(selected)
+        selectedPlayer = Players:FindFirstChild(selected)
+        print("Alvo selecionado:", selected)
+    end,
+})
+
+-- Botão de Teleport / Fling
+Local:MakeButton({
+    Name = "Teleport",
+    Callback = function()
+        if selectedPlayer and selectedPlayer.Character and selectedPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local targetPos = selectedPlayer.Character.HumanoidRootPart.Position
+            -- Lógica simplificada de Teleport (para Fling você precisaria rodar seu script de Velocity aqui)
+            LocalPlayer.Character.HumanoidRootPart.CFrame = selectedPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 2)
+            print("Indo até: " .. selectedPlayer.Name)
+        else
+            print("Selecione um jogador vivo primeiro!")
+        end
+    end,
+})
+
+-- Botão de Spy (Spectate)
+Local:MakeButton({
+    Name = "Spy (Assistir)",
+    Callback = function()
+        if selectedPlayer and selectedPlayer.Character then
+            workspace.CurrentCamera.CameraSubject = selectedPlayer.Character.Humanoid
+        else
+            workspace.CurrentCamera.CameraSubject = LocalPlayer.Character.Humanoid
+        end
+    end,
+})
+
+-- Opcional: Atualizar a lista quando alguém entra/sai
+Players.PlayerAdded:Connect(function() PlayerDropdown:Refresh(getPlayerNames(), true) end)
+Players.PlayerRemoving:Connect(function() PlayerDropdown:Refresh(getPlayerNames(), true) end)
+
+local selectedPlayer = nil
+local espEnabled = false
+local espObjects = {}
+
+-- função que cria o ESP
+local function createESP(player)
+
+	if player == LocalPlayer then return end
+
+	local char = player.Character
+	if not char then return end
+
+	if espObjects[player] then
+		espObjects[player]:Destroy()
+	end
+
+	local highlight = Instance.new("Highlight")
+	highlight.FillColor = Color3.fromRGB(255,0,0)
+	highlight.OutlineColor = Color3.fromRGB(255,255,255)
+	highlight.FillTransparency = 0.5
+	highlight.OutlineTransparency = 0
+	highlight.Adornee = char
+	highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+	highlight.Parent = char
+
+	-- nome acima da cabeça
+	local billboard = Instance.new("BillboardGui")
+	billboard.Size = UDim2.new(0,200,0,50)
+	billboard.StudsOffset = Vector3.new(0,3,0)
+	billboard.AlwaysOnTop = true
+
+	local text = Instance.new("TextLabel")
+	text.Size = UDim2.new(1,0,1,0)
+	text.BackgroundTransparency = 1
+	text.TextColor3 = Color3.fromRGB(255,0,0)
+	text.TextStrokeTransparency = 0
+	text.TextScaled = true
+	text.Font = Enum.Font.SourceSansBold
+	text.Text = player.Name.." | @"..player.DisplayName
+	text.Parent = billboard
+
+	billboard.Parent = char:WaitForChild("Head")
+
+	espObjects[player] = highlight
+end
+
+-- remover esp
+local function removeESP(player)
+	if espObjects[player] then
+		espObjects[player]:Destroy()
+		espObjects[player] = nil
+	end
+end
+
+-- INPUT (escolher player)
+Local:MakeInput({
+	Name = "Nick/nome do player",
+	Placeholder = "Digite o nome desejado...",
+	Callback = function(text, enter)
+
+		for _,player in pairs(Players:GetPlayers()) do
+			if string.lower(player.Name):find(string.lower(text)) 
+			or string.lower(player.DisplayName):find(string.lower(text)) then
+
+				selectedPlayer = player
+				print("Player selecionado:", player.Name)
+				break
+			end
+		end
+
+	end,
+})
+
+-- TOGGLE (ativar esp no player selecionado)
+Local:MakeToggle({
+	Name = "Ativar/desativar",
+	Default = false,
+	Callback = function(state)
+
+		espEnabled = state
+
+		if selectedPlayer then
+
+			if state then
+				createESP(selectedPlayer)
+			else
+				removeESP(selectedPlayer)
+			end
+
+		end
+
+	end,
+})
+
+-- ESP ALL
+Local:MakeButton({
+	Name = "Esp All",
+	Callback = function()
+
+		for _,player in pairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				createESP(player)
+			end
+		end
+
+	end,
+})
+
+-- Brookhaven Rp
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+
+if game.PlaceId == 4924922222 or string.find(string.lower(gameName), "Brookhaven RP") then
+    local Brookhaven = Win:MakeTab({
+        Name = "Brookhaven",
+        Icon = "rbxassetid://123456789", -- Exemplo de ícone de casa
+    })
+    
+    Brookhaven:MakeSection("Scripts")
+    
+Brookhaven:MakeButton({
+	Name = "Cartola Hub",
+	Callback = function()
+	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/Brookhaven",true))()
+	end,
+})
+
+Brookhaven:MakeButton({
+	Name = "Antares Hub Original",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BorisLua/AntaresHubSuaMaeNaMinhaCama/refs/heads/main/AntaresHubWorking.lua"))()
+	end,
+})
+
+Brookhaven:MakeButton({
+	Name = "Sp Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+	end,
+})
+
+Brookhaven:MakeButton({
+	Name = "Sander XY",
+	Callback = function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
+	end,
+})
+
+Brookhaven:MakeSection("Teleport Para locais")
+
+local locais = {
+	["🏠 Spawn / Lobby"] = Vector3.new(0, 0, 0),
+	["🏪 Shopping"] = Vector3.new(185, 18, -62),
+	["🚔 Centro Policial"] = Vector3.new(-295, 18, 112),
+	["🏦 Banco"] = Vector3.new(130, 18, 95),
+	["🏥 Hospital"] = Vector3.new(-180, 18, -210),
+	["⛽ Posto de Gasolina"] = Vector3.new(310, 18, 180),
+	["🍔 Restaurante"] = Vector3.new(60, 18, -150),
+	["🏫 Escola"] = Vector3.new(-90, 18, 270),
+	["✈️ Aeroporto"] = Vector3.new(450, 18, -300),
+	["🚒 Bombeiros"] = Vector3.new(-220, 18, 50),
+	["⚓ Porto"] = Vector3.new(380, 18, 350),
+	["🌲 Floresta"] = Vector3.new(-400, 18, -350),
+	["🏖️ Praia"] = Vector3.new(500, 5, 500),
+	["🏠 Bairro Residencial"] = Vector3.new(-150, 18, -80),
+	["🎭 Teatro"] = Vector3.new(20, 18, 200),
+}
+
+local localSelecionado = "🏠 Spawn / Lobby"
+
+local opcoes = {}
+for nome, _ in pairs(locais) do
+	table.insert(opcoes, nome)
+end
+table.sort(opcoes)
+
+Brookhaven:MakeDropdown({
+	Name = "Locais do Mapa",
+	Options = opcoes,
+	Default = "🏠 Spawn / Lobby",
+	Callback = function(selected)
+		localSelecionado = selected
+	end,
+})
+
+Brookhaven:MakeButton({
+	Name = "Teleportar",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+
+		if humanoidRootPart and locais[localSelecionado] then
+			humanoidRootPart.CFrame = CFrame.new(locais[localSelecionado])
+		end
+	end,
+})
+
+end
+
+if game.PlaceId == 16116270224 or string.find(string.lower(gameName), "Dandy world") then
+    local Dw = Win:MakeTab({
+        Name = "Dandy world",
+        Icon = "rbxassetid://123456789", -- Exemplo de ícone de casa
+    })
+    
+    Dw:MakeSection("Scripts")
+    
+Dw:MakeButton({
+	Name = "Boxten Gui / Nexus",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/box-01/refs/heads/main/box%23%5Bboxten%20sex%20gui%5D/box%23%5Bmain%5D.lua"))()
+	end,
+})
+
+Dw:MakeButton({
+	Name = "G0bbyD0llan",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/G0bbyD0llan/Ez-hub/refs/heads/main/Dandys_World_HUB_GHV"))()
+	end,
+})
+
+Dw:MakeButton({
+	Name = "Yoxi Hub script",
+	Callback = function()
+		loadstring(game:HttpGet("https://yoxi-hub.ru/api/loader"))()
+	end,
+})
+
+end
+
+-- Tab de Configuração
+local Config = Win:MakeTab({
+    Name = "Config",
+    Icon = "rbxassetid://123456",
+})
+
+Config:MakeSection("Configurações do hub") 
+
+Config:MakeLabel("Tamanho e Opacidade")
+
+Config:MakeSlider({
+	Name = "Size",
+	Min = 9,
+	Max = 600,
+	Default = 520,
+	Suffix = "Tmn",
+	Callback = function(value)
+		Win:SetSize(value) 
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.1 padrão",
+	Callback = function()
+		Win:SetOpacity(0.1)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.2",
+	Callback = function()
+		Win:SetOpacity(0.2)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.3",
+	Callback = function()
+		Win:SetOpacity(0.3)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.4",
+	Callback = function()
+		Win:SetOpacity(0.4)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.5",
+	Callback = function()
+		Win:SetOpacity(0.5)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.6",
+	Callback = function()
+		Win:SetOpacity(0.6)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.7",
+	Callback = function()
+		Win:SetOpacity(0.7)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 0.8",
+	Callback = function()
+		Win:SetOpacity(0.8)
+	end,
+})
+
+Config:MakeButton({
+	Name = "Opacidade 1(totalmente transparente",
+	Callback = function()
+		Win:SetOpacity(1)
+	end,
+})
+
+Config:MakeSection("INFO ADICIONAL") 
+
+Config:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas e tabs novas em cada jogo tipo dandy world e brookhaven")
