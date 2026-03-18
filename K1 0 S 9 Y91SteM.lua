@@ -52,7 +52,7 @@ Home:MakeImage({
 -- Sections home
 Home:MakeSection("Version")
 
-Home:MakeLabel("David Hub V1.0") 
+Home:MakeLabel("David Hub V4.0") 
 
 Home:MakeLabel("Lazarus/Lazarios UI Lib V1.0.0 Beta") 
 
