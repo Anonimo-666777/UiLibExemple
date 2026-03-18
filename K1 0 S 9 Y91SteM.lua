@@ -54,7 +54,7 @@ Home:MakeSection("Version")
 
 Home:MakeLabel("David Hub V4.0") 
 
-Home:MakeLabel("Lazarus/Lazarios UI Lib V1.0.0 Beta") 
+Home:MakeLabel("Lazarus/Lazarios UI Lib V1.0.4") 
 
 Home:MakeSection("Créditos") 
 
