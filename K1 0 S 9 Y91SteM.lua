@@ -11,7 +11,7 @@ local Lighting = game:GetService("Lighting")
 -- criação da Window
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
-    SubTitle = "v3.0 | by davidgames3d", 
+    SubTitle = "v4.0 | by davidgames3d", 
     Theme = "Dark",
     RGBBorder = true,
     LogoId    = "rbxassetid://132152602986684", 
@@ -67,11 +67,11 @@ Home:MakeImage({
 })
 
 Home:MakeInput({
-	Name = "Youtube do criador",
-	Placeholder = "https://youtube.com/@davidgames3d?si=sIBVlOB3inq3sCHb",
-	Callback = function(text, enter)
-		
-	end,
+        Name = "Youtube do criador",
+        Placeholder = "https://youtube.com/@davidgames3d?si=sIBVlOB3inq3sCHb",
+        Callback = function(text, enter)
+
+        end,
 })
 
 Home:MakeImage({
@@ -81,11 +81,11 @@ Home:MakeImage({
 })
 
 Home:MakeInput({
-	Name = "Discord do criador",
-	Placeholder = "https://discord.gg/nMGZGk5Tj",
-	Callback = function(text, enter)
-		setclipboard("https://discord.gg/nMGZGk5Tj")
-	end,
+        Name = "Discord do criador",
+        Placeholder = "https://discord.gg/nMGZGk5Tj",
+        Callback = function(text, enter)
+                setclipboard("https://discord.gg/nMGZGk5Tj")
+        end,
 })
 
 Home:MakeImage({
@@ -95,11 +95,11 @@ Home:MakeImage({
 })
 
 Home:MakeInput({
-	Name = "Github do criador",
-	Placeholder = "https://github.com/Anonimo-666777",
-	Callback = function(text, enter)
-		setclipboard("https://github.com/Anonimo-666777")
-	end,
+        Name = "Github do criador",
+        Placeholder = "https://github.com/Anonimo-666777",
+        Callback = function(text, enter)
+                setclipboard("https://github.com/Anonimo-666777")
+        end,
 })
 
 -- Section Info
@@ -125,17 +125,17 @@ Info:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas 
 Local:MakeSection("scripts") 
 
 Local:MakeButton({
-	Name = "Lazarus hub universal Script",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastefy.app/sJjppszH/raw"))()
-	end,
+        Name = "Lazarus hub universal Script",
+        Callback = function()
+                loadstring(game:HttpGet("https://pastefy.app/sJjppszH/raw"))()
+        end,
 })
 
 Local:MakeButton({
-	Name = "Lalol hub backdoor scanner universal",
-	Callback = function()
-		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-backdoor-83783"))()
-	end,
+        Name = "Lalol hub backdoor scanner universal",
+        Callback = function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-backdoor-83783"))()
+        end,
 })
 
 Local:MakeSection("LocalPlayer") 
@@ -143,205 +143,205 @@ Local:MakeSection("LocalPlayer")
 local imageID = ""
 
 Local:MakeInput({
-	Name = "Decal/Texture All",
-	Placeholder = "Digite o seu ID de Imagem",
-	Callback = function(text, enter)
-		imageID = text
-	end,
+        Name = "Decal/Texture All",
+        Placeholder = "Digite o seu ID de Imagem",
+        Callback = function(text, enter)
+                imageID = text
+        end,
 })
 
 Local:MakeButton({
-	Name = "Executar Decal/Texture All",
-	Callback = function()
-		if imageID == "" then
-			return
-		end
+        Name = "Executar Decal/Texture All",
+        Callback = function()
+                if imageID == "" then
+                        return
+                end
 
-		local formattedID = imageID
-		if not string.match(formattedID, "^rbxassetid://") then
-			formattedID = "rbxassetid://" .. formattedID
-		end
+                local formattedID = imageID
+                if not string.match(formattedID, "^rbxassetid://") then
+                        formattedID = "rbxassetid://" .. formattedID
+                end
 
-		local function applyToInstance(instance)
-			if instance:IsA("BasePart") or instance:IsA("MeshPart") or instance:IsA("SpecialMesh") or instance:IsA("UnionOperation") then
-				for _, child in ipairs(instance:GetChildren()) do
-					if child:IsA("Texture") then
-						child.Texture = formattedID
-					elseif child:IsA("Decal") then
-						child.Texture = formattedID
-					end
-				end
+                local function applyToInstance(instance)
+                        if instance:IsA("BasePart") or instance:IsA("MeshPart") or instance:IsA("SpecialMesh") or instance:IsA("UnionOperation") then
+                                for _, child in ipairs(instance:GetChildren()) do
+                                        if child:IsA("Texture") then
+                                                child.Texture = formattedID
+                                        elseif child:IsA("Decal") then
+                                                child.Texture = formattedID
+                                        end
+                                end
 
-				local hasTexture = false
-				for _, child in ipairs(instance:GetChildren()) do
-					if child:IsA("Texture") or child:IsA("Decal") then
-						hasTexture = true
-						break
-					end
-				end
+                                local hasTexture = false
+                                for _, child in ipairs(instance:GetChildren()) do
+                                        if child:IsA("Texture") or child:IsA("Decal") then
+                                                hasTexture = true
+                                                break
+                                        end
+                                end
 
-				if not hasTexture then
-					local decal = Instance.new("Decal")
-					decal.Texture = formattedID
-					decal.Face = Enum.NormalId.Front
-					decal.Parent = instance
+                                if not hasTexture then
+                                        local decal = Instance.new("Decal")
+                                        decal.Texture = formattedID
+                                        decal.Face = Enum.NormalId.Front
+                                        decal.Parent = instance
 
-					local decalBack = Instance.new("Decal")
-					decalBack.Texture = formattedID
-					decalBack.Face = Enum.NormalId.Back
-					decalBack.Parent = instance
+                                        local decalBack = Instance.new("Decal")
+                                        decalBack.Texture = formattedID
+                                        decalBack.Face = Enum.NormalId.Back
+                                        decalBack.Parent = instance
 
-					local decalTop = Instance.new("Decal")
-					decalTop.Texture = formattedID
-					decalTop.Face = Enum.NormalId.Top
-					decalTop.Parent = instance
+                                        local decalTop = Instance.new("Decal")
+                                        decalTop.Texture = formattedID
+                                        decalTop.Face = Enum.NormalId.Top
+                                        decalTop.Parent = instance
 
-					local decalBottom = Instance.new("Decal")
-					decalBottom.Texture = formattedID
-					decalBottom.Face = Enum.NormalId.Bottom
-					decalBottom.Parent = instance
+                                        local decalBottom = Instance.new("Decal")
+                                        decalBottom.Texture = formattedID
+                                        decalBottom.Face = Enum.NormalId.Bottom
+                                        decalBottom.Parent = instance
 
-					local decalLeft = Instance.new("Decal")
-					decalLeft.Texture = formattedID
-					decalLeft.Face = Enum.NormalId.Left
-					decalLeft.Parent = instance
+                                        local decalLeft = Instance.new("Decal")
+                                        decalLeft.Texture = formattedID
+                                        decalLeft.Face = Enum.NormalId.Left
+                                        decalLeft.Parent = instance
 
-					local decalRight = Instance.new("Decal")
-					decalRight.Texture = formattedID
-					decalRight.Face = Enum.NormalId.Right
-					decalRight.Parent = instance
-				end
-			end
+                                        local decalRight = Instance.new("Decal")
+                                        decalRight.Texture = formattedID
+                                        decalRight.Face = Enum.NormalId.Right
+                                        decalRight.Parent = instance
+                                end
+                        end
 
-			if instance:IsA("SpecialMesh") then
-				instance.TextureId = formattedID
-			end
+                        if instance:IsA("SpecialMesh") then
+                                instance.TextureId = formattedID
+                        end
 
-			if instance:IsA("Sky") then
-				instance.SkyboxBk = formattedID
-				instance.SkyboxDn = formattedID
-				instance.SkyboxFt = formattedID
-				instance.SkyboxLf = formattedID
-				instance.SkyboxRt = formattedID
-				instance.SkyboxUp = formattedID
-			end
-		end
+                        if instance:IsA("Sky") then
+                                instance.SkyboxBk = formattedID
+                                instance.SkyboxDn = formattedID
+                                instance.SkyboxFt = formattedID
+                                instance.SkyboxLf = formattedID
+                                instance.SkyboxRt = formattedID
+                                instance.SkyboxUp = formattedID
+                        end
+                end
 
-		local function recurse(parent)
-			for _, instance in ipairs(parent:GetDescendants()) do
-				applyToInstance(instance)
-			end
-		end
+                local function recurse(parent)
+                        for _, instance in ipairs(parent:GetDescendants()) do
+                                applyToInstance(instance)
+                        end
+                end
 
-		recurse(workspace)
+                recurse(workspace)
 
-		for _, player in ipairs(game.Players:GetPlayers()) do
-			if player.Character then
-				recurse(player.Character)
-				for _, part in ipairs(player.Character:GetDescendants()) do
-					if part:IsA("SpecialMesh") then
-						part.TextureId = formattedID
-					end
-					if part:IsA("Shirt") then
-						part.ShirtTemplate = formattedID
-					end
-					if part:IsA("Pants") then
-						part.PantsTemplate = formattedID
-					end
-					if part:IsA("ShirtGraphic") then
-						part.Graphic = formattedID
-					end
-				end
-			end
-		end
+                for _, player in ipairs(game.Players:GetPlayers()) do
+                        if player.Character then
+                                recurse(player.Character)
+                                for _, part in ipairs(player.Character:GetDescendants()) do
+                                        if part:IsA("SpecialMesh") then
+                                                part.TextureId = formattedID
+                                        end
+                                        if part:IsA("Shirt") then
+                                                part.ShirtTemplate = formattedID
+                                        end
+                                        if part:IsA("Pants") then
+                                                part.PantsTemplate = formattedID
+                                        end
+                                        if part:IsA("ShirtGraphic") then
+                                                part.Graphic = formattedID
+                                        end
+                                end
+                        end
+                end
 
-		print("Decal/Texture All aplicado com ID: " .. formattedID)
-	end,
+                print("Decal/Texture All aplicado com ID: " .. formattedID)
+        end,
 })
 
 Local:MakeButton({
-	Name = "Fly Gui",
-	Callback = function()
-		loadstring(game:HttpGet("https://pastefy.app/h8KwvbDk/raw"))()
-	end,
+        Name = "Fly Gui",
+        Callback = function()
+                loadstring(game:HttpGet("https://pastefy.app/h8KwvbDk/raw"))()
+        end,
 })
 
 Local:MakeButton({
-	Name = "ShiftLocker",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/disaster-CREW/Shift-lock-for-mobile/refs/heads/main/shiftlock.lua"))()
-	end,
+        Name = "ShiftLocker",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/disaster-CREW/Shift-lock-for-mobile/refs/heads/main/shiftlock.lua"))()
+        end,
 })
 
 Local:MakeButton({
-	Name = "WalkFling Universal",
-	Callback = function()
-		loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
-	end,
+        Name = "WalkFling Universal",
+        Callback = function()
+                loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt'),true))()
+        end,
 })
 
 Local:MakeSlider({
-	Name = "Velocidade",
-	Min = 0,
-	Max = 500,
-	Default = 16,
-	Suffix = " sp",
-	Callback = function(value)
-		if player.Character and player.Character:FindFirstChild("Humanoid") then
-			player.Character.Humanoid.WalkSpeed = value
-		end
-	end,
+        Name = "Velocidade",
+        Min = 0,
+        Max = 500,
+        Default = 16,
+        Suffix = " sp",
+        Callback = function(value)
+                if player.Character and player.Character:FindFirstChild("Humanoid") then
+                        player.Character.Humanoid.WalkSpeed = value
+                end
+        end,
 })
 
 Local:MakeSlider({
-	Name = "Altura do Pulo",
-	Min = 0,
-	Max = 500,
-	Default = 50,
-	Suffix = " jp",
-	Callback = function(value)
-		if player.Character and player.Character:FindFirstChild("Humanoid") then
-			player.Character.Humanoid.UseJumpPower = true
-			player.Character.Humanoid.JumpPower = value
-		end
-	end,
+        Name = "Altura do Pulo",
+        Min = 0,
+        Max = 500,
+        Default = 50,
+        Suffix = " jp",
+        Callback = function(value)
+                if player.Character and player.Character:FindFirstChild("Humanoid") then
+                        player.Character.Humanoid.UseJumpPower = true
+                        player.Character.Humanoid.JumpPower = value
+                end
+        end,
 })
 
 Local:MakeButton({
-	Name = "Resetar Atributos",
-	Callback = function()
-		if player.Character and player.Character:FindFirstChild("Humanoid") then
-			player.Character.Humanoid.WalkSpeed = 16
-			player.Character.Humanoid.JumpPower = 50
-			print("Atributos resetados!")
-		end
-	end
+        Name = "Resetar Atributos",
+        Callback = function()
+                if player.Character and player.Character:FindFirstChild("Humanoid") then
+                        player.Character.Humanoid.WalkSpeed = 16
+                        player.Character.Humanoid.JumpPower = 50
+                        print("Atributos resetados!")
+                end
+        end
 })
 
 Local:MakeToggle({
-	Name = "Noclip",
-	Default = false,
-	Callback = function(state)
-		if state then
-			-- Ativa o Noclip
-			noclipConnection = RunService.Stepped:Connect(function()
-				if player.Character then
-					for _, part in pairs(player.Character:GetDescendants()) do
-						if part:IsA("BasePart") then
-							part.CanCollide = false
-						end
-					end
-				end
-			end)
-		else
-			-- Desativa o Noclip
-			if noclipConnection then
-				noclipConnection:Disconnect()
-				noclipConnection = nil
-			end
-			-- Opcional: Forçar a colisão de volta imediatamente (ou esperar o reset do motor físico)
-		end
-	end,
+        Name = "Noclip",
+        Default = false,
+        Callback = function(state)
+                if state then
+                        -- Ativa o Noclip
+                        noclipConnection = RunService.Stepped:Connect(function()
+                                if player.Character then
+                                        for _, part in pairs(player.Character:GetDescendants()) do
+                                                if part:IsA("BasePart") then
+                                                        part.CanCollide = false
+                                                end
+                                        end
+                                end
+                        end)
+                else
+                        -- Desativa o Noclip
+                        if noclipConnection then
+                                noclipConnection:Disconnect()
+                                noclipConnection = nil
+                        end
+                        -- Opcional: Forçar a colisão de volta imediatamente (ou esperar o reset do motor físico)
+                end
+        end,
 })
 
 Local:MakeToggle({
@@ -536,105 +536,105 @@ local espObjects = {}
 -- função que cria o ESP
 local function createESP(player)
 
-	if player == LocalPlayer then return end
+        if player == LocalPlayer then return end
 
-	local char = player.Character
-	if not char then return end
+        local char = player.Character
+        if not char then return end
 
-	if espObjects[player] then
-		espObjects[player]:Destroy()
-	end
+        if espObjects[player] then
+                espObjects[player]:Destroy()
+        end
 
-	local highlight = Instance.new("Highlight")
-	highlight.FillColor = Color3.fromRGB(255,0,0)
-	highlight.OutlineColor = Color3.fromRGB(255,255,255)
-	highlight.FillTransparency = 0.5
-	highlight.OutlineTransparency = 0
-	highlight.Adornee = char
-	highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-	highlight.Parent = char
+        local highlight = Instance.new("Highlight")
+        highlight.FillColor = Color3.fromRGB(255,0,0)
+        highlight.OutlineColor = Color3.fromRGB(255,255,255)
+        highlight.FillTransparency = 0.5
+        highlight.OutlineTransparency = 0
+        highlight.Adornee = char
+        highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+        highlight.Parent = char
 
-	-- nome acima da cabeça
-	local billboard = Instance.new("BillboardGui")
-	billboard.Size = UDim2.new(0,200,0,50)
-	billboard.StudsOffset = Vector3.new(0,3,0)
-	billboard.AlwaysOnTop = true
+        -- nome acima da cabeça
+        local billboard = Instance.new("BillboardGui")
+        billboard.Size = UDim2.new(0,200,0,50)
+        billboard.StudsOffset = Vector3.new(0,3,0)
+        billboard.AlwaysOnTop = true
 
-	local text = Instance.new("TextLabel")
-	text.Size = UDim2.new(1,0,1,0)
-	text.BackgroundTransparency = 1
-	text.TextColor3 = Color3.fromRGB(255,0,0)
-	text.TextStrokeTransparency = 0
-	text.TextScaled = true
-	text.Font = Enum.Font.SourceSansBold
-	text.Text = player.Name.." | @"..player.DisplayName
-	text.Parent = billboard
+        local text = Instance.new("TextLabel")
+        text.Size = UDim2.new(1,0,1,0)
+        text.BackgroundTransparency = 1
+        text.TextColor3 = Color3.fromRGB(255,0,0)
+        text.TextStrokeTransparency = 0
+        text.TextScaled = true
+        text.Font = Enum.Font.SourceSansBold
+        text.Text = player.Name.." | @"..player.DisplayName
+        text.Parent = billboard
 
-	billboard.Parent = char:WaitForChild("Head")
+        billboard.Parent = char:WaitForChild("Head")
 
-	espObjects[player] = highlight
+        espObjects[player] = highlight
 end
 
 -- remover esp
 local function removeESP(player)
-	if espObjects[player] then
-		espObjects[player]:Destroy()
-		espObjects[player] = nil
-	end
+        if espObjects[player] then
+                espObjects[player]:Destroy()
+                espObjects[player] = nil
+        end
 end
 
 -- INPUT (escolher player)
 Local:MakeInput({
-	Name = "Nick/nome do player",
-	Placeholder = "Digite o nome desejado...",
-	Callback = function(text, enter)
+        Name = "Nick/nome do player",
+        Placeholder = "Digite o nome desejado...",
+        Callback = function(text, enter)
 
-		for _,player in pairs(Players:GetPlayers()) do
-			if string.lower(player.Name):find(string.lower(text)) 
-			or string.lower(player.DisplayName):find(string.lower(text)) then
+                for _,player in pairs(Players:GetPlayers()) do
+                        if string.lower(player.Name):find(string.lower(text)) 
+                        or string.lower(player.DisplayName):find(string.lower(text)) then
 
-				selectedPlayer = player
-				print("Player selecionado:", player.Name)
-				break
-			end
-		end
+                                selectedPlayer = player
+                                print("Player selecionado:", player.Name)
+                                break
+                        end
+                end
 
-	end,
+        end,
 })
 
 -- TOGGLE (ativar esp no player selecionado)
 Local:MakeToggle({
-	Name = "Ativar/desativar",
-	Default = false,
-	Callback = function(state)
+        Name = "Ativar/desativar",
+        Default = false,
+        Callback = function(state)
 
-		espEnabled = state
+                espEnabled = state
 
-		if selectedPlayer then
+                if selectedPlayer then
 
-			if state then
-				createESP(selectedPlayer)
-			else
-				removeESP(selectedPlayer)
-			end
+                        if state then
+                                createESP(selectedPlayer)
+                        else
+                                removeESP(selectedPlayer)
+                        end
 
-		end
+                end
 
-	end,
+        end,
 })
 
 -- ESP ALL
 Local:MakeButton({
-	Name = "Esp All",
-	Callback = function()
+        Name = "Esp All",
+        Callback = function()
 
-		for _,player in pairs(Players:GetPlayers()) do
-			if player ~= LocalPlayer then
-				createESP(player)
-			end
-		end
+                for _,player in pairs(Players:GetPlayers()) do
+                        if player ~= LocalPlayer then
+                                createESP(player)
+                        end
+                end
 
-	end,
+        end,
 })
 
 Local:MakeButton({
@@ -761,85 +761,85 @@ if game.PlaceId == 4924922222 or string.find(string.lower(gameName), "Brookhaven
         Name = "Brookhaven",
         Icon = "rbxassetid://123456789", -- Exemplo de ícone de casa
     })
-    
+
     Brookhaven:MakeSection("Scripts")
-    
+
 Brookhaven:MakeButton({
-	Name = "Cartola Hub",
-	Callback = function()
-	    loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/Brookhaven",true))()
-	end,
+        Name = "Cartola Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/Brookhaven",true))()
+        end,
 })
 
 Brookhaven:MakeButton({
-	Name = "Antares Hub Original",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/BorisLua/AntaresHubSuaMaeNaMinhaCama/refs/heads/main/AntaresHubWorking.lua"))()
-	end,
+        Name = "Antares Hub Original",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/BorisLua/AntaresHubSuaMaeNaMinhaCama/refs/heads/main/AntaresHubWorking.lua"))()
+        end,
 })
 
 Brookhaven:MakeButton({
-	Name = "Sp Hub",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
-	end,
+        Name = "Sp Hub",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Brookhaven"))()
+        end,
 })
 
 Brookhaven:MakeButton({
-	Name = "Sander XY",
-	Callback = function()
-		loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
-	end,
+        Name = "Sander XY",
+        Callback = function()
+                loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
+        end,
 })
 
 Brookhaven:MakeSection("Teleport Para locais")
 
 local locais = {
-	["🏠 Spawn / Lobby"] = Vector3.new(0, 0, 0),
-	["🏪 Shopping"] = Vector3.new(185, 18, -62),
-	["🚔 Centro Policial"] = Vector3.new(-295, 18, 112),
-	["🏦 Banco"] = Vector3.new(130, 18, 95),
-	["🏥 Hospital"] = Vector3.new(-180, 18, -210),
-	["⛽ Posto de Gasolina"] = Vector3.new(310, 18, 180),
-	["🍔 Restaurante"] = Vector3.new(60, 18, -150),
-	["🏫 Escola"] = Vector3.new(-90, 18, 270),
-	["✈️ Aeroporto"] = Vector3.new(450, 18, -300),
-	["🚒 Bombeiros"] = Vector3.new(-220, 18, 50),
-	["⚓ Porto"] = Vector3.new(380, 18, 350),
-	["🌲 Floresta"] = Vector3.new(-400, 18, -350),
-	["🏖️ Praia"] = Vector3.new(500, 5, 500),
-	["🏠 Bairro Residencial"] = Vector3.new(-150, 18, -80),
-	["🎭 Teatro"] = Vector3.new(20, 18, 200),
+        ["🏠 Spawn / Lobby"] = Vector3.new(0, 0, 0),
+        ["🏪 Shopping"] = Vector3.new(185, 18, -62),
+        ["🚔 Centro Policial"] = Vector3.new(-295, 18, 112),
+        ["🏦 Banco"] = Vector3.new(130, 18, 95),
+        ["🏥 Hospital"] = Vector3.new(-180, 18, -210),
+        ["⛽ Posto de Gasolina"] = Vector3.new(310, 18, 180),
+        ["🍔 Restaurante"] = Vector3.new(60, 18, -150),
+        ["🏫 Escola"] = Vector3.new(-90, 18, 270),
+        ["✈️ Aeroporto"] = Vector3.new(450, 18, -300),
+        ["🚒 Bombeiros"] = Vector3.new(-220, 18, 50),
+        ["⚓ Porto"] = Vector3.new(380, 18, 350),
+        ["🌲 Floresta"] = Vector3.new(-400, 18, -350),
+        ["🏖️ Praia"] = Vector3.new(500, 5, 500),
+        ["🏠 Bairro Residencial"] = Vector3.new(-150, 18, -80),
+        ["🎭 Teatro"] = Vector3.new(20, 18, 200),
 }
 
 local localSelecionado = "🏠 Spawn / Lobby"
 
 local opcoes = {}
 for nome, _ in pairs(locais) do
-	table.insert(opcoes, nome)
+        table.insert(opcoes, nome)
 end
 table.sort(opcoes)
 
 Brookhaven:MakeDropdown({
-	Name = "Locais do Mapa",
-	Options = opcoes,
-	Default = "🏠 Spawn / Lobby",
-	Callback = function(selected)
-		localSelecionado = selected
-	end,
+        Name = "Locais do Mapa",
+        Options = opcoes,
+        Default = "🏠 Spawn / Lobby",
+        Callback = function(selected)
+                localSelecionado = selected
+        end,
 })
 
 Brookhaven:MakeButton({
-	Name = "Teleportar",
-	Callback = function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character or player.CharacterAdded:Wait()
-		local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+        Name = "Teleportar",
+        Callback = function()
+                local player = game.Players.LocalPlayer
+                local character = player.Character or player.CharacterAdded:Wait()
+                local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 
-		if humanoidRootPart and locais[localSelecionado] then
-			humanoidRootPart.CFrame = CFrame.new(locais[localSelecionado])
-		end
-	end,
+                if humanoidRootPart and locais[localSelecionado] then
+                        humanoidRootPart.CFrame = CFrame.new(locais[localSelecionado])
+                end
+        end,
 })
 
 end
@@ -849,33 +849,105 @@ if game.PlaceId == 16116270224 or string.find(string.lower(gameName), "Dandy wor
         Name = "Dandy world",
         Icon = "rbxassetid://123456789", -- Exemplo de ícone de casa
     })
-    
+
     Dw:MakeSection("Scripts")
-    
+
 Dw:MakeButton({
-	Name = "Boxten Gui / Nexus",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/box-01/refs/heads/main/box%23%5Bboxten%20sex%20gui%5D/box%23%5Bmain%5D.lua"))()
-	end,
+        Name = "Boxten Gui / Nexus",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxten-Keyes/box-01/refs/heads/main/box%23%5Bboxten%20sex%20gui%5D/box%23%5Bmain%5D.lua"))()
+        end,
 })
 
 Dw:MakeButton({
-	Name = "G0bbyD0llan",
-	Callback = function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/G0bbyD0llan/Ez-hub/refs/heads/main/Dandys_World_HUB_GHV"))()
-	end,
+        Name = "G0bbyD0llan",
+        Callback = function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/G0bbyD0llan/Ez-hub/refs/heads/main/Dandys_World_HUB_GHV"))()
+        end,
 })
 
 Dw:MakeButton({
-	Name = "Yoxi Hub script",
+        Name = "Yoxi Hub script",
+        Callback = function()
+                loadstring(game:HttpGet("https://yoxi-hub.ru/api/loader"))()
+        end,
+})
+
+end
+
+if game.PlaceId == 109983668079237
+
+local Brainrot = Win:MakeTab({
+    Name = "Roube um Brainrot",
+    Icon = "rbxassetid://123456",
+})
+
+Brainrot:MakeButton({
+	Name = "Ajjans Duels",
 	Callback = function()
-		loadstring(game:HttpGet("https://yoxi-hub.ru/api/loader"))()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/e8c2b7bdfd494b913839f58581a203f9.lua"))()
+	end,
+})
+
+Brainrot:MakeButton({
+	Name = "Kurd Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/dontasklol/Stealingurbrainrots/refs/heads/main/Kurd%20hub"))()
+	end,
+})
+
+Brainrot:MakeButton({
+	Name = "Lemon Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6d08fbf253529a4fefa32ff404bd5448.lua"))()
+	end,
+})
+
+Brainrot:MakeButton({
+	Name = "Express Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d8824b23a4d9f2e0d62b4e69397d206b.lua"))()
+	end,
+})
+
+Brainrot:MakeButton({
+	Name = "Cartola Hub | Roube um Brainrot",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Davi999z/Cartola-Hub/refs/heads/main/StealABrainrot.lua",true))()
 	end,
 })
 
 end
 
+if game.PlaceId == 79546208627805
 
+local 99Nights = Win:MakeTab({
+    Name = "99 noites na floresta",
+    Icon = "rbxassetid://123456",
+})
+
+99Nights:MakeButton({
+	Name = "OverFlow Hub",
+	Callback = function()
+		loadstring(game:HttpGet("https://overflow.cx/loader.html"))()
+	end,
+})
+
+99Nights:MakeButton({
+	Name = "VoidWare",
+	Callback = function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/99-Nights-in-the-Forest-VOIDWARE-122596"))()
+	end,
+})
+
+99Nights:MakeButton({
+	Name = "IndraHub",
+	Callback = function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/wJKRvL4W"))()
+	end,
+})
+
+end
 
 -- Tab de Configuração
 local Config = Win:MakeTab({
