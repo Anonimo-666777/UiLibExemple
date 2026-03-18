@@ -6,11 +6,12 @@ local RunService = game:GetService("RunService")
 local noclipConnection
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
+local Lighting = game:GetService("Lighting")
 
 -- criação da Window
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
-    SubTitle = "v2.0 | by davidgames3d", 
+    SubTitle = "v3.0 | by davidgames3d", 
     Theme = "Dark",
     RGBBorder = true,
     LogoId    = "rbxassetid://132152602986684", 
@@ -27,6 +28,11 @@ local Home = Win:MakeTab({
 
 local Local = Win:MakeTab({
     Name = "Scripts",
+    Icon = "rbxassetid://123456",
+})
+
+local Teleport = Win:MakeTab({
+    Name = "Teleport",
     Icon = "rbxassetid://123456",
 })
 
@@ -338,6 +344,134 @@ Local:MakeToggle({
 	end,
 })
 
+Local:MakeToggle({
+    Name = "God Mode",
+    Default = false,
+    Callback = function(state)
+        local hum = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid")
+        if hum then
+            hum.MaxHealth = state and math.huge or 100
+            hum.Health = hum.MaxHealth
+            NexusUI:Notify({ Title = "God Mode", Message = state and "Ativado!" or "Desativado!", Duration = 2 })
+        end
+    end,
+})
+
+Local:MakeToggle({
+    Name = "Invisível",
+    Default = false,
+    Callback = function(state)
+        local char = LocalPlayer.Character
+        if char then
+            for _, part in pairs(char:GetDescendants()) do
+                if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                    part.Transparency = state and 1 or 0
+                end
+                if part:IsA("Decal") then
+                    part.Transparency = state and 1 or 0
+                end
+            end
+            NexusUI:Notify({ Title = "Visual", Message = state and "Invisível ativado!" or "Visível novamente!", Duration = 2 })
+        end
+    end,
+})
+
+Local:MakeToggle({
+    Name = "Rainbow Character",
+    Default = false,
+    Callback = function(state)
+        if state then
+            _G.RainbowActive = true
+            task.spawn(function()
+                local hue = 0
+                while _G.RainbowActive do
+                    hue = (hue + 1) % 360
+                    local color = Color3.fromHSV(hue / 360, 1, 1)
+                    local char = LocalPlayer.Character
+                    if char then
+                        for _, part in pairs(char:GetDescendants()) do
+                            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                                part.Color = color
+                            end
+                        end
+                    end
+                    task.wait(0.05)
+                end
+            end)
+        else
+            _G.RainbowActive = false
+            NexusUI:Notify({ Title = "Visual", Message = "Rainbow desativado!", Duration = 2 })
+        end
+    end,
+})
+
+Local:MakeSection("Ambiente")
+
+Local:MakeToggle({
+    Name = "Fullbright",
+    Default = false,
+    Callback = function(state)
+        Lighting.Brightness = state and 10 or 1
+        Lighting.FogEnd = state and 100000 or 100000
+        Lighting.Ambient = state and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(70, 70, 70)
+        Lighting.OutdoorAmbient = state and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(140, 140, 140)
+        NexusUI:Notify({ Title = "Visual", Message = state and "Fullbright ativado!" or "Fullbright desativado!", Duration = 2 })
+    end,
+})
+
+Local:MakeSlider({
+    Name = "Hora do Dia",
+    Min = 0,
+    Max = 24,
+    Default = 14,
+    Suffix = "h",
+    Callback = function(value)
+        Lighting.ClockTime = value
+    end,
+})
+
+Local:MakeToggle({
+    Name = "Remover Névoa",
+    Default = false,
+    Callback = function(state)
+        Lighting.FogEnd = state and 100000 or 1000
+        Lighting.FogStart = state and 99999 or 0
+        NexusUI:Notify({ Title = "Visual", Message = state and "Névoa removida!" or "Névoa restaurada!", Duration = 2 })
+    end,
+})
+
+Local:MakeDropdown({
+    Name = "Tema do Céu",
+    Options = { "Normal", "Noite", "Amanhecer", "Pôr do Sol", "Tempestade" },
+    Default = "Normal",
+    Callback = function(selected)
+        if selected == "Normal" then
+            Lighting.ClockTime = 14
+            Lighting.Brightness = 1
+            Lighting.Ambient = Color3.fromRGB(70, 70, 70)
+        elseif selected == "Noite" then
+            Lighting.ClockTime = 0
+            Lighting.Brightness = 0
+            Lighting.Ambient = Color3.fromRGB(10, 10, 30)
+        elseif selected == "Amanhecer" then
+            Lighting.ClockTime = 6
+            Lighting.Brightness = 0.5
+            Lighting.Ambient = Color3.fromRGB(255, 160, 80)
+        elseif selected == "Pôr do Sol" then
+            Lighting.ClockTime = 18
+            Lighting.Brightness = 0.5
+            Lighting.Ambient = Color3.fromRGB(255, 100, 50)
+        elseif selected == "Tempestade" then
+            Lighting.ClockTime = 12
+            Lighting.Brightness = 0.1
+            Lighting.Ambient = Color3.fromRGB(40, 40, 60)
+            Lighting.FogEnd = 200
+            Lighting.FogColor = Color3.fromRGB(80, 80, 100)
+        end
+        NexusUI:Notify({ Title = "Visual", Message = "Tema: " .. selected, Duration = 2 })
+    end,
+})
+
 Local:MakeSection("outros players") 
 
 local selectedPlayer = nil
@@ -503,6 +637,122 @@ Local:MakeButton({
 	end,
 })
 
+Local:MakeButton({
+    Name = "Remover ESP All",
+    Callback = function()
+        for p, _ in pairs(espObjects) do removeESP(p) end
+        NexusUI:Notify({ Title = "ESP", Message = "ESP removido de todos!", Duration = 2 })
+    end,
+})
+
+-- teleporte tab/section
+Teleport:MakeSection("Coordenadas Manuais")
+
+local tpX, tpY, tpZ = 0, 0, 0
+
+Teleport:MakeInput({
+    Name = "X",
+    Placeholder = "Ex: 100",
+    Callback = function(text) tpX = tonumber(text) or 0 end,
+})
+
+Teleport:MakeInput({
+    Name = "Y",
+    Placeholder = "Ex: 10",
+    Callback = function(text) tpY = tonumber(text) or 0 end,
+})
+
+Teleport:MakeInput({
+    Name = "Z",
+    Placeholder = "Ex: -50",
+    Callback = function(text) tpZ = tonumber(text) or 0 end,
+})
+
+Teleport:MakeButton({
+    Name = "Ir para Coordenadas",
+    Callback = function()
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if hrp then
+            hrp.CFrame = CFrame.new(tpX, tpY, tpZ)
+            NexusUI:Notify({ Title = "Teleport", Message = string.format("Tp para: %.0f, %.0f, %.0f", tpX, tpY, tpZ), Duration = 3 })
+        end
+    end,
+})
+
+Teleport:MakeSection("Posição Atual")
+
+Teleport:MakeButton({
+    Name = "Copiar Posição Atual",
+    Callback = function()
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if hrp then
+            local pos = hrp.Position
+            local posStr = string.format("%.1f, %.1f, %.1f", pos.X, pos.Y, pos.Z)
+            setclipboard(posStr)
+            NexusUI:Notify({ Title = "Teleport", Message = "Copiado: " .. posStr, Duration = 3 })
+        end
+    end,
+})
+
+Teleport:MakeSection("Waypoints")
+
+local waypoints = {}
+local waypointNames = {}
+
+Teleport:MakeInput({
+    Name = "Nome do Waypoint",
+    Placeholder = "Ex: Minha Casa",
+    Callback = function(text)
+        _G.waypointName = text
+    end,
+})
+
+Teleport:MakeButton({
+    Name = "Salvar Posição Atual",
+    Callback = function()
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        local name = _G.waypointName or ""
+        if hrp and name ~= "" then
+            waypoints[name] = hrp.CFrame
+            table.insert(waypointNames, name)
+            WaypointDropdown:Refresh(waypointNames, false)
+            NexusUI:Notify({ Title = "Waypoint", Message = "Salvo: " .. name, Duration = 2 })
+        else
+            NexusUI:Notify({ Title = "Erro", Message = "Digite um nome primeiro!", Duration = 3 })
+        end
+    end,
+})
+
+WaypointDropdown = Teleport:MakeDropdown({
+    Name = "Ir para Waypoint",
+    Options = waypointNames,
+    Default = "Nenhum",
+    Callback = function(selected)
+        local hrp = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
+        if hrp and waypoints[selected] then
+            hrp.CFrame = waypoints[selected]
+            NexusUI:Notify({ Title = "Teleport", Message = "Indo para: " .. selected, Duration = 2 })
+        end
+    end,
+})
+
+Teleport:MakeButton({
+    Name = "Deletar Waypoint Selecionado",
+    Callback = function()
+        local name = _G.waypointName or ""
+        if waypoints[name] then
+            waypoints[name] = nil
+            for i, v in ipairs(waypointNames) do
+                if v == name then table.remove(waypointNames, i) break end
+            end
+            WaypointDropdown:Refresh(waypointNames, false)
+            NexusUI:Notify({ Title = "Waypoint", Message = "Deletado: " .. name, Duration = 2 })
+        else
+            NexusUI:Notify({ Title = "Erro", Message = "Waypoint não encontrado!", Duration = 3 })
+        end
+    end,
+})
+
 -- Brookhaven Rp
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 
@@ -625,90 +875,67 @@ Dw:MakeButton({
 
 end
 
+
+
 -- Tab de Configuração
 local Config = Win:MakeTab({
     Name = "Config",
     Icon = "rbxassetid://123456",
 })
 
-Config:MakeSection("Configurações do hub") 
-
-Config:MakeLabel("Tamanho e Opacidade")
+Config:MakeSection("Tamanho da Janela")
 
 Config:MakeSlider({
-	Name = "Size",
-	Min = 9,
-	Max = 600,
-	Default = 520,
-	Suffix = "Tmn",
-	Callback = function(value)
-		Win:SetSize(value) 
-	end,
+    Name = "Tamanho",
+    Min = 300,
+    Max = 900,
+    Default = 520,
+    Suffix = " px",
+    Callback = function(value)
+        Win:SetSize(value)
+    end,
 })
 
 Config:MakeButton({
-	Name = "Opacidade 0.1 padrão",
-	Callback = function()
-		Win:SetOpacity(0.1)
-	end,
+    Name = "Resetar Tamanho",
+    Callback = function()
+        Win:SetSize(520)
+        NexusUI:Notify({
+            Title = "Config",
+            Message = "Tamanho resetado para 520!",
+            Duration = 3,
+        })
+    end,
+})
+
+Config:MakeSection("Opacidade da Janela")
+
+Config:MakeDropdown({
+    Name = "Opacidade",
+    Options = {"0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1"},
+    Default = "0.1",
+    Callback = function(value)
+        Win:SetOpacity(tonumber(value))
+        NexusUI:Notify({
+            Title = "Config",
+            Message = "Opacidade: " .. value,
+            Duration = 2,
+        })
+    end,
 })
 
 Config:MakeButton({
-	Name = "Opacidade 0.2",
-	Callback = function()
-		Win:SetOpacity(0.2)
-	end,
+    Name = "Resetar Opacidade",
+    Callback = function()
+        Win:SetOpacity(0.1)
+        NexusUI:Notify({
+            Title = "Config",
+            Message = "Opacidade resetada para 0.1!",
+            Duration = 3,
+        })
+    end,
 })
 
-Config:MakeButton({
-	Name = "Opacidade 0.3",
-	Callback = function()
-		Win:SetOpacity(0.3)
-	end,
-})
+Config:MakeSection("Info Adicional")
 
-Config:MakeButton({
-	Name = "Opacidade 0.4",
-	Callback = function()
-		Win:SetOpacity(0.4)
-	end,
-})
-
-Config:MakeButton({
-	Name = "Opacidade 0.5",
-	Callback = function()
-		Win:SetOpacity(0.5)
-	end,
-})
-
-Config:MakeButton({
-	Name = "Opacidade 0.6",
-	Callback = function()
-		Win:SetOpacity(0.6)
-	end,
-})
-
-Config:MakeButton({
-	Name = "Opacidade 0.7",
-	Callback = function()
-		Win:SetOpacity(0.7)
-	end,
-})
-
-Config:MakeButton({
-	Name = "Opacidade 0.8",
-	Callback = function()
-		Win:SetOpacity(0.8)
-	end,
-})
-
-Config:MakeButton({
-	Name = "Opacidade 1(totalmente transparente",
-	Callback = function()
-		Win:SetOpacity(1)
-	end,
-})
-
-Config:MakeSection("INFO ADICIONAL") 
-
-Config:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas e tabs novas em cada jogo tipo dandy world e brookhaven")
+Config:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas e tabs novas em cada jogo tipo Dandy World e Brookhaven")
