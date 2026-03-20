@@ -85,11 +85,11 @@ NexusUI:MakeDialog({
 })
 
 -- Tabs principais
-local Home = Win:MakeTab({ Name = "Home", Icon = "rbxassetid://123456" })
-local Local = Win:MakeTab({ Name = "Scripts", Icon = "rbxassetid://123456" })
-local Teleport = Win:MakeTab({ Name = "Teleport", Icon = "rbxassetid://123456" })
-local Info = Win:MakeTab({ Name = "Info", Icon = "rbxassetid://123456" })
-local Game = Win:MakeTab({ Name = "Games", Icon = "rbxassetid://123456" }) 
+local Home = Win:MakeTab({ Name = "Home", Icon = "rbxassetid://7539983773" })
+local Local = Win:MakeTab({ Name = "Scripts", Icon = "rbxassetid://7992557358" })
+local Teleport = Win:MakeTab({ Name = "Teleport", Icon = "rbxassetid://12941020168" })
+local Info = Win:MakeTab({ Name = "Info", Icon = "rbxassetid://5832745500" })
+local Game = Win:MakeTab({ Name = "Games", Icon = "rbxassetid://138342563252941" }) 
 
 -- ========== HOME ==========
 Home:MakeImage({ Image = "rbxassetid://132152602986684", Height = 150, Desc = "Logo do hub" })
@@ -828,7 +828,7 @@ CriarTabJogo("Murder Mystery 2", function()
 end)
 
 -- ========== CONFIG ==========
-local Config = Win:MakeTab({ Name = "Config", Icon = "rbxassetid://123456" })
+local Config = Win:MakeTab({ Name = "Config", Icon = "rbxassetid://98211971158539" })
 
 Config:MakeSection("Tamanho da Janela")
 
@@ -879,3 +879,13 @@ Config:MakeButton({
 
 Config:MakeSection("Info Adicional")
 Config:MakeLabel("O Hub é Universal mas dependendo do jogo terá funções novas e tabs novas em cada jogo tipo Brookhaven e outros é só selecionar no dropdown acima o jogo que deseja")
+Config:MakeSection("!ZONA DE RISCO!") 
+
+Config:MakeButton({
+    Name = "Resetar Tudo",
+    Callback = function()
+        saveData = DefaultSave()
+        SaveData()
+        Win:Notify({ Title = "Config", Content = "Tudo resetado!", Duration = 3 })
+    end
+})
