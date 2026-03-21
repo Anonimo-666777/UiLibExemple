@@ -55,7 +55,7 @@ LoadSave() -- carrega ao iniciar
 -- Window
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
-    SubTitle = "v6.0 | by davidgames3d",
+    SubTitle = "v7.0 | by davidgames3d",
     Theme = "Dark",
     RGBBorder = true,
     LogoId = "rbxassetid://132152602986684",
@@ -94,7 +94,7 @@ local Game = Win:MakeTab({ Name = "Games", Icon = "rbxassetid://138342563252941"
 -- ========== HOME ==========
 Home:MakeImage({ Image = "rbxassetid://132152602986684", Height = 150, Desc = "Logo do hub" })
 Home:MakeSection("Version")
-Home:MakeLabel("David Hub V6.0")
+Home:MakeLabel("David Hub V7.0")
 Home:MakeLabel("Lazarios UI Lib V1.0.4")
 Home:MakeSection("Créditos")
 Home:MakeLabel("Redes sociais")
@@ -126,7 +126,7 @@ Home:MakeButton({
 -- ========== INFO ==========
 Info:MakeSection("Version")
 Info:MakeLabel("Lazarios UI Lib v1.0.4")
-Info:MakeLabel("David Hub V6.0")
+Info:MakeLabel("David Hub V7.0")
 Info:MakeSection("Curiosidades e fatos")
 Info:MakeLabel("Esse script usa uma Lib chamada Lazarios feita por mim")
 Info:MakeLabel("Eu faço scripts só pelo celular sei programar pouco mas tô aprendendo")
@@ -151,7 +151,14 @@ Local:MakeButton({
     end,
 })
 
-Local:MakeSection("LocalPlayer")
+Local:MakeButton({
+    Name = "R15 Para R6",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-R15-to-r6-script-working-all-game-26416"))()
+    end,
+})
+
+Local:MakeSection("Player")
 
 local imageID = ""
 
@@ -414,6 +421,50 @@ Local:MakeToggle({
     end,
 })
 
+-- anti-kick
+Local:MakeButton({
+	Name = "Anti-kick",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/SUUUUUS00000/MEGGD-Anti-kick/refs/heads/main/MEGGD%20Best%20Anti-kick.lua'))()
+	end,
+})
+
+-- ServerHop
+Local:MakeButton({
+	Name = "Server Hop",
+	Callback = function()
+		local HttpService = game:GetService("HttpService")
+		local TeleportService = game:GetService("TeleportService")
+		local Players = game:GetService("Players")
+		local LocalPlayer = Players.LocalPlayer
+		
+		local function Hop()
+			local PlaceId = game.PlaceId
+			-- URL para buscar servidores públicos do jogo atual
+			local url = "https://roblox.com" .. PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
+			
+			local success, result = pcall(function()
+				return HttpService:JSONDecode(game:HttpGet(url))
+			end)
+			
+			if success and result and result.data then
+				for _, server in ipairs(result.data) do
+					-- Verifica se o servidor não é o atual e tem espaço disponível
+					if server.id ~= game.JobId and server.playing < server.maxPlayers then
+						TeleportService:TeleportToPlaceInstance(PlaceId, server.id, LocalPlayer)
+						break
+					end
+				end
+			else
+				Win:Notify({ Title = "SERVER HOP", Content = "Erro ao tentar encontrar ou ir para outro servidor. Tente novamente.", Duration = 3, Type = "Error" })
+			end
+		end
+
+		Win:Notify({ Title = "SERVER HOP", Content = "Tentando encontrar um servidor...", Duration = 3, Type = "Warning" })
+		Hop()
+	end,
+})
+
 Local:MakeSection("Ambiente")
 
 Local:MakeToggle({
@@ -422,7 +473,7 @@ Local:MakeToggle({
         Lighting.Brightness = state and 10 or 1
         Lighting.Ambient = state and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(70, 70, 70)
         Lighting.OutdoorAmbient = state and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(140, 140, 140)
-        NexusUI:Notify({ Title = "Visual", Message = state and "Fullbright ativado!" or "Fullbright desativado!", Duration = 2 })
+        Win:Notify({ Title = "Visual", Message = state and "Fullbright ativado!" or "Fullbright desativado!", Duration = 2 })
     end,
 })
 
