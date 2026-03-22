@@ -259,7 +259,7 @@ end
     end,
 })
 
-Local:MakeButton({ Name = "Fly Gui", Callback = function() loadstring(game:HttpGet("https://pastefy.app/h8KwvbDk/raw"))() end })
+Local:MakeButton({ Name = "Fly Gui", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Anonimo-666777/UiLibExemple/main/FGS.lua"))() end })
 Local:MakeButton({ Name = "ShiftLocker", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/disaster-CREW/Shift-lock-for-mobile/refs/heads/main/shiftlock.lua"))() end })
 Local:MakeButton({ Name = "WalkFling Universal", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe/main/obf_rf6iQURzu1fqrytcnLBAvW34C9N55kS9g9G3CKz086rC47M6632sEd4ZZYB0AYgV.lua.txt", true))() end })
 
@@ -371,6 +371,30 @@ Local:MakeToggle({
             end)
         else
             _G.RainbowActive = false
+        end
+    end,
+})
+
+Local:MakeSlider({
+    Name = "Tamanho da Cabeça",
+    Min = 1, -- 1 é o tamanho padrão
+    Max = 10, -- Você pode aumentar este limite se quiser uma cabeça gigante
+    Default = 1,
+    Suffix = "x",
+    Callback = function(value)
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+
+        if humanoid then
+            -- Procura pelo valor de escala da cabeça
+            local headScale = humanoid:FindFirstChild("HeadScale")
+            if headScale then
+                headScale.Value = value
+            else
+                -- Caso o valor não exista (comum em alguns modelos), tenta criar ou avisar
+                Win:Notify({ Title = "R15 one suport", Content = "Erro HeadScale não deu certo. você precisa de R15.", Duration = 3, Type = "Error" })
+            end
         end
     end,
 })
