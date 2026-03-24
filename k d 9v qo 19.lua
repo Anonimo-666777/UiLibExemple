@@ -8,9 +8,55 @@ local LocalPlayer = Players.LocalPlayer
 local Lighting = game:GetService("Lighting")
 local TeleportService = game:GetService("TeleportService")
 local noclipConnection
+local Camera = workspace.CurrentCamera
+local Mouse = LocalPlayer:GetMouse()
+local UserInputService = game:GetService("UserInputService")
+local Workspace = game:GetService("Workspace")
 
 -- Controle de tabs já carregadas
 local tabsCarregadas = {}
+
+-- aimbot versão 0.1
+local AimbotEnabled = false
+local TargetMode = "Azul" 
+local TargetPart = "Head" 
+local autoShootEnabled = false
+local shootConnection
+
+-- aimbot novo
+local p = Players.LocalPlayer
+local cam = Workspace.CurrentCamera
+local target = nil
+local lockEnabled = false -- Controla se a função está ativa no menu
+
+-- Função para achar o alvo mais próximo e visível
+local function findTarget()
+    local closest, minD = nil, math.huge
+    local char = p.Character
+    if not char or not char:FindFirstChild("HumanoidRootPart") then return nil end
+    local hrp = char.HumanoidRootPart
+
+    for _, plr in pairs(Players:GetPlayers()) do
+        if plr ~= p and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+            local tHrp = plr.Character.HumanoidRootPart
+            local dist = (hrp.Position - tHrp.Position).Magnitude
+            
+            -- Verifica visibilidade
+            local origin = cam.CFrame.Position
+            local direction = (tHrp.Position - origin).Unit * 500
+            local rayParams = RaycastParams.new()
+            rayParams.FilterDescendantsInstances = {char}
+            rayParams.FilterType = Enum.RaycastFilterType.Blacklist
+
+            local ray = Workspace:Raycast(origin, direction, rayParams)
+            
+            if dist < minD and ray and ray.Instance:IsDescendantOf(plr.Character) then
+                closest, minD = tHrp, dist
+            end
+        end
+    end
+    return closest
+end
 
 -- Serviço de Save
 local HttpService = game:GetService("HttpService")
@@ -87,6 +133,7 @@ NexusUI:MakeDialog({
 -- Tabs principais
 local Home = Win:MakeTab({ Name = "Home", Icon = "rbxassetid://7539983773" })
 local Local = Win:MakeTab({ Name = "Scripts", Icon = "rbxassetid://7992557358" })
+local Fps = Win:MakeTab({ Name = "AIMBOT", Icon = " rbxassetid://12900411572" }) 
 local Teleport = Win:MakeTab({ Name = "Teleport", Icon = "rbxassetid://12941020168" })
 local Info = Win:MakeTab({ Name = "Info", Icon = "rbxassetid://5832745500" })
 local Game = Win:MakeTab({ Name = "Games", Icon = "rbxassetid://138342563252941" }) 
@@ -674,6 +721,129 @@ Local:MakeButton({
         NexusUI:Notify({ Title = "ESP", Message = "ESP removido de todos!", Duration = 2 })
     end,
 })
+
+-- ========== AIMBOT ==========
+Fps:MakeSection("FPS SCRIPTS")
+
+local function getClosestPlayer()
+    local closest = nil
+    local shortestDistance = math.huge
+
+    for _, player in pairs(Players:GetPlayers()) do
+        if player ~= LocalPlayer and player.Character and player.Character:FindFirstChild(TargetPart) then
+            
+            local targetPart = player.Character[TargetPart]
+            local screenPoint, onScreen = Camera:WorldToViewportPoint(targetPart.Position)
+
+            if TargetMode == "Azul" then -- "Por perto" (Distância Magnitude)
+                local dist = (LocalPlayer.Character.HumanoidRootPart.Position - targetPart.Position).Magnitude
+                if dist < shortestDistance then
+                    closest = targetPart
+                    shortestDistance = dist
+                end
+            elseif TargetMode == "Vermelho" then -- "Na visão" (Distância do Mouse/Centro)
+                if onScreen then
+                    local mousePos = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+                    local dist = (Vector2.new(screenPoint.X, screenPoint.Y) - mousePos).Magnitude
+                    if dist < shortestDistance then
+                        closest = targetPart
+                        shortestDistance = dist
+                    end
+                end
+            end
+        end
+    end
+    return closest
+end
+
+-- Integração com os Toggles e Dropdowns
+Fps:MakeToggle({
+    Name = "Aimbot Ativo",
+    Default = false,
+    Callback = function(state)
+        AimbotEnabled = state
+        print("Aimbot Status:", state)
+    end,
+})
+
+Fps:MakeDropdown({
+    Name = "Modo de Foco",
+    Options = {"Azul", "Vermelho", "Verde"}, -- Azul: Perto, Vermelho: Visão, Verde: Partes
+    Default = "Azul",
+    Callback = function(selected)
+        TargetMode = selected
+        -- Exemplo: Se selecionar Verde, poderia abrir outro menu para escolher a parte
+        if selected == "Verde" then TargetPart = "LeftLeg" else TargetPart = "Head" end
+    end,
+})
+
+-- Loop de Execução
+RunService.RenderStepped:Connect(function()
+    if AimbotEnabled then
+        local target = getClosestPlayer()
+        if target then
+            -- Suavização (Smoothing) da câmera em direção ao alvo
+            Camera.CFrame = CFrame.new(Camera.CFrame.Position, target.Position)
+        end
+    end
+end)
+
+Fps:MakeToggle({
+	Name = "Auto-Atirar (Center)",
+	Default = false,
+	Callback = function(state)
+		autoShootEnabled = state
+		
+		-- Limpa a conexão anterior se existir
+		if shootConnection then shootConnection:Disconnect() end
+
+		if autoShootEnabled then
+			shootConnection = RunService.RenderStepped:Connect(function()
+				-- Detecta o que o mouse está apontando
+				local target = Mouse.Target
+				if target and target.Parent:FindFirstChild("Humanoid") then
+					local targetPlayer = Players:GetPlayerFromCharacter(target.Parent)
+					
+					-- Verifica se o alvo não é você mesmo
+					if targetPlayer ~= LocalPlayer then
+						-- Simula o disparo (M1)
+						mouse1click() 
+						-- Nota: Algumas ferramentas exigem chamar a função de tiro do script do jogo
+					end
+				end
+			end)
+		end
+	end,
+})
+
+Fps:MakeSection("Aimbot V2 novo")
+
+Fps:MakeToggle({
+	Name = "Lock-On (Teclado Q)",
+	Default = false,
+	Callback = function(state)
+		lockEnabled = state
+        if not state then
+            target = nil -- Limpa o alvo se desligar o toggle
+        end
+	end,
+})
+
+-- Input Q para travar (Só funciona se o Toggle estiver ON)
+UserInputService.InputBegan:Connect(function(io, gp)
+	if not gp and io.KeyCode == Enum.KeyCode.Q and lockEnabled then
+		target = (not target) and findTarget() or nil
+	end
+end)
+
+-- Atualização da Câmera
+RunService.RenderStepped:Connect(function()
+	if lockEnabled and target and target.Parent then
+		cam.CFrame = CFrame.lookAt(cam.CFrame.Position, target.Position)
+	else
+        if not lockEnabled then target = nil end
+	end
+end)
 
 -- ========== TELEPORT ==========
 Teleport:MakeSection("Coordenadas Manuais")
