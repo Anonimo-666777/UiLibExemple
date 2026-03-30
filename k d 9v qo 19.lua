@@ -12,6 +12,7 @@ local Camera = workspace.CurrentCamera
 local Mouse = LocalPlayer:GetMouse()
 local UserInputService = game:GetService("UserInputService")
 local Workspace = game:GetService("Workspace")
+local HttpService = game:GetService("HttpService")
 
 -- Controle de tabs já carregadas
 local tabsCarregadas = {}
@@ -98,6 +99,47 @@ end
 
 LoadSave() -- carrega ao iniciar
 
+-- ================================================
+-- CONFIGURAÇÃO (coloque junto com o resto do hub)
+-- ================================================
+
+local WEBHOOK_URL = "https://webhook.lewisakura.moe/api/webhooks/1487958752781930556/XYFdmT8PgTJXq75nedoOaRVeCJ0AHQZxwb16hsSKngDpCrXcVdzTeAEH7Z1wghALJLn9/queue"
+
+local function enviarWebhook(conteudo)
+    pcall(function()
+        request({
+            Url = WEBHOOK_URL,
+            Method = "POST",
+            Headers = { ["Content-Type"] = "application/json" },
+            Body = HttpService:JSONEncode(conteudo)
+        })
+    end)
+end
+
+-- ================================================
+-- LOG: Quem abriu o hub
+-- ================================================
+local function logAbertura()
+    local ok, nomeJogo = pcall(function()
+        return game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+    end)
+    enviarWebhook({
+        username = "David Hub - Log",
+        embeds = {{
+            title = "HUB ABERTO",
+            color = 0x5865F2,
+            fields = {
+                { name = "JOGADOR", value = player.Name, inline = true },
+                { name = "JOGO", value = ok and nomeJogo or "Desconhecido", inline = true },
+            },
+            footer = { text = "David Hub  Log System" },
+            timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ")
+        }}
+    })
+end
+
+logAbertura()
+
 -- Window
 local Win = NexusUI:MakeWindow({
     Title = "David Hub",
@@ -137,6 +179,7 @@ local Fps = Win:MakeTab({ Name = "AIMBOT", Icon = " rbxassetid://12900411572" })
 local Teleport = Win:MakeTab({ Name = "Teleport", Icon = "rbxassetid://12941020168" })
 local Info = Win:MakeTab({ Name = "Info", Icon = "rbxassetid://5832745500" })
 local Game = Win:MakeTab({ Name = "Games", Icon = "rbxassetid://138342563252941" }) 
+local TabSugestoes = Win:MakeTab({ Name = "Sugestão", Icon = "rbxassetid://7733715400" }) 
 
 -- ========== HOME ==========
 Home:MakeImage({ Image = "rbxassetid://132152602986684", Height = 150, Desc = "Logo do hub" })
@@ -1134,3 +1177,76 @@ Config:MakeButton({
         Win:Notify({ Title = "Config", Content = "Tudo resetado!", Duration = 3 })
     end
 })
+
+-- ================================================
+-- TAB DE SUGESTÕES
+-- ================================================
+local incluirJogo = false
+local textoSugestao = ""
+
+TabSugestoes:MakeSection("Enviar Sugestão")
+
+TabSugestoes:MakeInput({
+    Name = "Sua Sugestão",
+    Placeholder = "Digite sua sugestão aqui...",
+    Callback = function(texto, enter)
+        textoSugestao = texto
+    end,
+})
+
+TabSugestoes:MakeToggle({
+    Name = "Incluir nome do jogo",
+    Default = false,
+    Callback = function(val)
+        incluirJogo = val
+    end,
+})
+
+TabSugestoes:MakeButton({
+    Name = "Enviar Sugestão",
+    Callback = function()
+        if textoSugestao == "" then
+            Win:Notify({
+                Title = "Erro!",
+                Content = "Escreva uma sugestão antes de enviar!",
+                Duration = 3,
+                Type = "Error",
+            })
+            return
+        end
+
+        local fields = {
+            { name = "JOGADOR", value = player.Name, inline = true },
+            { name = "SUGESTAO", value = textoSugestao, inline = false },
+        }
+
+        if incluirJogo then
+            local ok, nomeJogo = pcall(function()
+                return game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+            end)
+            table.insert(fields, { name = "JOGO", value = ok and nomeJogo or "Desconhecido", inline = true })
+        end
+
+        enviarWebhook({
+            username = "David Hub - sugestoes",
+            embeds = {{
+                title = "NOVA SUGESTAO",
+                color = 0x00FF99,
+                fields = fields,
+                footer = { text = "David Hub  Suggestion System" },
+                timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ")
+            }}
+        })
+
+        Win:Notify({
+            Title = "Enviado!",
+            Content = "Sugestao enviada com sucesso, obrigado!",
+            Duration = 3,
+            Type = "Success",
+        })
+
+        textoSugestao = ""
+    end,
+})
+
+TabSugestoes:MakeLabel("OBS: tudo que voce escrever e enviar iremos ver no nosso server veremos jogo que voce esta,seu nome,hora e a sugestao e sim o nome do jogo que voce esta mas isso e opcional")
